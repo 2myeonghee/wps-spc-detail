@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WPS SPC 설립 제안서 v3.0</title>
+<title>WPS SPC 설립 제안서 v3.1</title>
 <style>
 :root {
   --primary: #1a2a3a;
@@ -25,7 +25,6 @@ body {
 }
 .wrap { max-width: 860px; margin: 0 auto; padding: 0 40px; }
 
-/* ── 표지 ── */
 .cover {
   background: var(--primary);
   color: #fff;
@@ -46,200 +45,73 @@ body {
   border-radius: 20px;
   margin-bottom: 28px;
 }
-.cover-top h1 {
-  font-size: 48px;
-  font-weight: 800;
-  line-height: 1.2;
-  color: #fff;
-  margin-bottom: 16px;
-}
-.cover-top .subtitle {
-  font-size: 18px;
-  color: rgba(255,255,255,0.72);
-  font-weight: 400;
-  max-width: 480px;
-}
+.cover-top h1 { font-size: 44px; font-weight: 800; line-height: 1.2; color: #fff; margin-bottom: 16px; }
+.cover-top .subtitle { font-size: 17px; color: rgba(255,255,255,0.72); font-weight: 400; }
 .cover-bottom { margin-top: 48px; }
-.kpi-row {
-  display: flex;
-  gap: 2px;
-  margin-bottom: 32px;
-}
-.kpi-cell {
-  flex: 1;
-  background: rgba(255,255,255,0.09);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 8px;
-  padding: 18px 20px;
-  text-align: center;
-}
-.kpi-label { font-size: 11px; color: rgba(255,255,255,0.6); letter-spacing: 0.06em; margin-bottom: 6px; }
-.kpi-val { font-size: 26px; font-weight: 800; color: #fff; }
-.kpi-unit { font-size: 12px; color: rgba(255,255,255,0.55); margin-top: 3px; }
-.cover-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  font-size: 12px;
-  color: rgba(255,255,255,0.5);
-}
+.kpi-row { display: flex; gap: 2px; margin-bottom: 32px; }
+.kpi-cell { flex: 1; background: rgba(255,255,255,0.09); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 16px 14px; text-align: center; }
+.kpi-label { font-size: 10px; color: rgba(255,255,255,0.6); letter-spacing: 0.06em; margin-bottom: 6px; }
+.kpi-val { font-size: 24px; font-weight: 800; color: #fff; }
+.kpi-unit { font-size: 11px; color: rgba(255,255,255,0.55); margin-top: 3px; }
+.cover-meta { display: flex; justify-content: space-between; align-items: flex-end; font-size: 12px; color: rgba(255,255,255,0.5); }
 
-/* ── 섹션 ── */
-.section {
-  padding: 56px 0 40px;
-  border-bottom: 1px solid var(--border);
-}
+.section { padding: 52px 0 36px; border-bottom: 1px solid var(--border); }
 .section:last-child { border-bottom: none; }
-.section-num {
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--accent);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-.section-title {
-  font-size: 26px;
-  font-weight: 800;
-  color: var(--primary);
-  margin-bottom: 20px;
-  line-height: 1.3;
-}
-.section-lead {
-  color: var(--sub);
-  font-size: 14px;
-  line-height: 1.85;
-  margin-bottom: 28px;
-}
+.section-num { font-size: 11px; font-weight: 700; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
+.section-title { font-size: 24px; font-weight: 800; color: var(--primary); margin-bottom: 18px; line-height: 1.3; }
+.section-lead { color: var(--sub); font-size: 14px; line-height: 1.85; margin-bottom: 24px; }
 
-/* ── 소제목 ── */
-.h3 {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--primary);
-  border-left: 3px solid var(--accent);
-  padding-left: 10px;
-  margin: 28px 0 12px;
-}
+.h3 { font-size: 15px; font-weight: 700; color: var(--primary); border-left: 3px solid var(--accent); padding-left: 10px; margin: 28px 0 12px; }
 .h3:first-child { margin-top: 0; }
+.h4 { font-size: 13px; font-weight: 700; color: var(--primary); margin: 18px 0 8px; }
 
-/* ── 리스트 ── */
 ul.list { padding-left: 18px; margin: 8px 0 16px; }
-ul.list li { margin-bottom: 8px; color: var(--text); }
+ul.list li { margin-bottom: 8px; }
 ul.list li strong { font-weight: 700; }
 
-/* ── 표 ── */
-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px; }
-th, td { border: 1px solid var(--border); padding: 9px 11px; text-align: left; word-break: keep-all; }
+table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 13px; }
+th, td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; word-break: keep-all; }
 th { background: #f5f5f5; font-weight: 700; color: var(--text); }
 td { background: #fff; }
 td.em { font-weight: 700; }
+td.plus { font-weight: 700; color: #0a5c36; }
+td.minus { font-weight: 700; color: #8b1a1a; }
 td.center, th.center { text-align: center; }
+td.right, th.right { text-align: right; }
 
-/* ── 강조 박스 ── */
-.info-box {
-  background: var(--light);
-  border-left: 4px solid var(--accent);
-  border-radius: 4px;
-  padding: 16px 20px;
-  margin: 20px 0;
-  font-size: 13.5px;
-  line-height: 1.85;
-  color: var(--text);
-}
+.info-box { background: var(--light); border-left: 4px solid var(--accent); border-radius: 4px; padding: 14px 18px; margin: 18px 0; font-size: 13.5px; line-height: 1.85; }
 .info-box strong { font-weight: 700; }
+.warn-box { background: #fffbf0; border-left: 4px solid #c8a000; border-radius: 4px; padding: 14px 18px; margin: 18px 0; font-size: 13.5px; line-height: 1.85; }
 
-/* ── 카드 그리드 ── */
-.card-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin: 20px 0;
-}
-.card {
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 22px 20px;
-}
-.card-title {
-  font-size: 14px;
-  font-weight: 800;
-  color: var(--primary);
-  margin-bottom: 12px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--border);
-}
+.card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 18px 0; }
+.card { border: 1px solid var(--border); border-radius: 10px; padding: 20px 18px; }
+.card-title { font-size: 14px; font-weight: 800; color: var(--primary); margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+.card-grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin: 18px 0; }
 
-/* ── 3열 카드 ── */
-.card-grid3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 14px;
-  margin: 20px 0;
-}
-
-/* ── cum-fill 바 그래프 ── */
-.bar-wrap { margin: 20px 0; }
-.bar-row { display: flex; align-items: center; margin-bottom: 10px; gap: 12px; }
+.bar-wrap { margin: 18px 0; }
+.bar-row { display: flex; align-items: center; margin-bottom: 9px; gap: 10px; }
 .bar-label { width: 130px; font-size: 12px; color: var(--sub); flex-shrink: 0; text-align: right; }
-.bar-track { flex: 1; background: #eee; border-radius: 4px; height: 22px; overflow: hidden; }
+.bar-track { flex: 1; background: #eee; border-radius: 4px; height: 20px; overflow: hidden; }
 .cum-fill { height: 100%; background: var(--accent); border-radius: 4px; }
-.bar-val { width: 110px; font-size: 12px; font-weight: 700; color: var(--primary); flex-shrink: 0; }
+.bar-val { width: 120px; font-size: 12px; font-weight: 700; color: var(--primary); flex-shrink: 0; }
 
-/* ── 단계 로드맵 ── */
-.phase-list { margin: 20px 0; }
-.phase-item { display: flex; gap: 16px; margin-bottom: 24px; }
-.phase-num {
-  width: 36px; height: 36px; border-radius: 50%;
-  background: var(--primary); color: #fff;
-  font-size: 12px; font-weight: 800;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0; margin-top: 2px;
-}
+.phase-list { margin: 18px 0; }
+.phase-item { display: flex; gap: 16px; margin-bottom: 22px; }
+.phase-num { width: 34px; height: 34px; border-radius: 50%; background: var(--primary); color: #fff; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
 .phase-period { font-size: 11px; color: var(--accent); font-weight: 700; margin-bottom: 4px; }
 .phase-name { font-size: 15px; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
 .phase-desc { font-size: 13px; color: var(--sub); line-height: 1.8; }
 
-/* ── 플로우 다이어그램 ── */
-.flow-row {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  margin: 20px 0;
-  flex-wrap: wrap;
-}
-.flow-node {
-  background: var(--light);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 12px 16px;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--primary);
-  min-width: 100px;
-  flex: 1;
-}
-.flow-node.accent-node {
-  background: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
-}
-.flow-arrow {
-  font-size: 18px;
-  color: var(--sub);
-  padding: 0 6px;
-  flex-shrink: 0;
-}
+.tag { display: inline-block; font-size: 10px; font-weight: 700; background: var(--accent); color: #fff; padding: 2px 7px; border-radius: 4px; margin-left: 4px; vertical-align: middle; }
+.tag-g { background: #0a5c36; }
+.tag-y { background: #7a5c00; }
+.tag-r { background: #8b1a1a; }
 
-/* ── 인쇄 ── */
 @media print {
   body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .cover { height: calc(297mm - 36mm); min-height: unset; padding: 18mm; }
-  .section { page-break-before: always; padding: 40px 0 28px; }
-  .card { page-break-inside: avoid; }
-  .info-box { page-break-inside: avoid; }
-  .phase-item { page-break-inside: avoid; }
+  .section { page-break-before: always; padding: 36px 0 24px; }
+  .card, .info-box, .warn-box, .phase-item { page-break-inside: avoid; }
   table { font-size: 10.5px; }
   th, td { padding: 7px 8px; }
   tbody { display: table-row-group; }
@@ -254,31 +126,31 @@ td.center, th.center { text-align: center; }
 <!-- 표지 -->
 <div class="cover">
   <div class="cover-top">
-    <div class="badge">SPC 설립 제안서 · 2026년 3월 · v3.0</div>
+    <div class="badge">SPC 설립 제안서 · 2026년 3월 · v3.1</div>
     <h1>WPS 아파트 단지<br>SPC 설립 제안서</h1>
-    <div class="subtitle">아파트너 × 법무법인 더 에이치 황해<br>영업 채널 공유 · 저고정비 구조 · 단계적 자동화</div>
+    <div class="subtitle">아파트너 × 법무법인 더 에이치 황해<br>쿠폰 선납 고정 수입 · 영업 채널 공유 · 단계적 자동화</div>
   </div>
   <div class="cover-bottom">
     <div class="kpi-row">
       <div class="kpi-cell">
-        <div class="kpi-label">목표 운영 단지</div>
-        <div class="kpi-val">50<span style="font-size:16px">개</span></div>
-        <div class="kpi-unit">2028년까지</div>
+        <div class="kpi-label">초기 자본금</div>
+        <div class="kpi-val">1<span style="font-size:15px">억</span></div>
+        <div class="kpi-unit">추후 증자·투자 유치</div>
       </div>
       <div class="kpi-cell">
-        <div class="kpi-label">단지당 월 순수익 (로봇 전환 후)</div>
-        <div class="kpi-val">850<span style="font-size:16px">만원</span></div>
-        <div class="kpi-unit">표준 단지 기준</div>
-      </div>
-      <div class="kpi-cell">
-        <div class="kpi-label">50개 단지 월 순수익</div>
-        <div class="kpi-val">4.2<span style="font-size:16px">억</span></div>
-        <div class="kpi-unit">연간 약 50.5억</div>
+        <div class="kpi-label">3,000세대 단지당 월 순수익</div>
+        <div class="kpi-val">813<span style="font-size:14px">만원</span></div>
+        <div class="kpi-unit">로봇 전환 · Normal 기준</div>
       </div>
       <div class="kpi-cell">
         <div class="kpi-label">인테리어 투자 회수</div>
-        <div class="kpi-val">8<span style="font-size:16px">개월</span></div>
-        <div class="kpi-unit">단지당 4,500만원 기준</div>
+        <div class="kpi-val">3~6<span style="font-size:14px">개월</span></div>
+        <div class="kpi-unit">3,000세대 이상 기준</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="kpi-label">WPS 타깃 시장</div>
+        <div class="kpi-val">1,100<span style="font-size:14px">개</span></div>
+        <div class="kpi-unit">3,000세대 이상 전국 단지</div>
       </div>
     </div>
     <div class="cover-meta">
@@ -290,177 +162,166 @@ td.center, th.center { text-align: center; }
 
 <div class="wrap">
 
-<!-- 01 사업 개요 -->
+<!-- 01 -->
 <div class="section">
   <div class="section-num">SECTION 01</div>
   <div class="section-title">사업 개요 — 왜 지금, 왜 이 구조인가</div>
-  <p class="section-lead">WPS(We Proudly Serve Starbucks)는 스타벅스가 운영하는 B2B 라이선스 프로그램입니다. 허가된 파트너 운영사가 스타벅스 브랜드의 원두·장비·교육을 제공받아 아파트 커뮤니티 시설, 기업 로비, 공공기관 등 비공개 공간에서 스타벅스 브랜드 카페를 운영합니다. 입주민 입장에서는 일반 카페와 동일한 스타벅스 음료를 더 짧은 거리에서 즐길 수 있으며, 단지 입장에서는 시설 활성화와 부동산 가치 제고 효과가 있습니다.</p>
+  <p class="section-lead">WPS(We Proudly Serve Starbucks)는 스타벅스의 B2B 라이선스 프로그램으로, 허가된 파트너가 스타벅스 브랜드의 원두·장비·교육을 활용해 아파트 커뮤니티 시설 등 비공개 공간에서 카페를 운영합니다. 이 사업의 핵심은 두 파트너사가 이미 보유한 채널과 신뢰 관계를 레버리지로 활용한다는 점입니다. 신규 영업 조직 없이 즉시 실행 가능한 구조입니다.</p>
 
-  <div class="info-box">
-    <strong>핵심 전제:</strong> 이 사업의 성공 조건은 신규 영업 조직 구성이 아닙니다. 두 파트너사가 <strong>이미 보유한 채널과 신뢰 관계</strong>를 SPC가 레버리지로 활용하는 것입니다. 아파트너의 앱 기반 영업력과 황해의 200개+ 단지 법무 네트워크가 영업 기능을 완전히 대체합니다.
-  </div>
-
-  <div class="h3">SPC 설립 배경</div>
+  <div class="h3">SPC 기본 구조</div>
   <table>
-    <thead><tr><th>구분</th><th>내용</th></tr></thead>
+    <thead><tr><th>항목</th><th>내용</th></tr></thead>
     <tbody>
       <tr><td><strong>법인 형태</strong></td><td>주식회사 (특수목적법인, SPC)</td></tr>
-      <tr><td><strong>초기 자본금</strong></td><td>5억원 (협의 기준)</td></tr>
+      <tr><td><strong>초기 자본금</strong></td><td><strong>1억원</strong> — 설립 및 초기 운영비 목적. 헬리오시티 등 대형 단지 도입 시 증자 또는 외부 투자 유치로 별도 조달</td></tr>
       <tr><td><strong>설립 주체</strong></td><td>아파트너 + 법무법인 더 에이치 황해</td></tr>
-      <tr><td><strong>목적 사업</strong></td><td>아파트 단지 내 WPS 카페 운영 중개·관리, 커뮤니티 시설 위탁 운영, 브랜드 파트너십</td></tr>
-      <tr><td><strong>핵심 원칙</strong></td><td>전담 영업 인력 채용 없음, 파트너사 기존 채널 공유, 고정비 400만원/월 유지</td></tr>
+      <tr><td><strong>목적 사업</strong></td><td>아파트 단지 내 WPS 카페 운영 중개·관리, 커뮤니티 시설 위탁 운영, 네슬레 등 브랜드 독점 판권 협상</td></tr>
+      <tr><td><strong>핵심 원칙</strong></td><td>전담 영업 인력 채용 없음, 파트너사 기존 채널 공유, SPC 본사 고정비 400만원/월 유지</td></tr>
     </tbody>
   </table>
 
-  <div class="h3">SPC를 별도 설립해야 하는 4가지 이유</div>
+  <div class="info-box">
+    <strong>자본금 단계 전략:</strong> 초기 1억원으로 파일럿 3~5개 단지를 운영하면서 수익성을 검증합니다. 헬리오시티처럼 규모가 큰 단지 도입이 필요할 시점에는 주주 증자, 웰브릿지 등 외부 투자 유치, 또는 운영 수익 재투자를 통해 자본을 확충합니다. 처음부터 과도한 자본을 묶을 필요가 없습니다.
+  </div>
+
+  <div class="h3">SPC 설립 4가지 근거</div>
   <ul class="list">
-    <li><strong>선례 방지:</strong> 기존 법인에서 직접 투자하면 향후 유사 요청의 선례가 됩니다. SPC를 통해 이 건만의 독립 구조임을 명확히 합니다.</li>
-    <li><strong>자본 규모 확대:</strong> 기존 가용 자본으로는 불가능한 5억원 규모의 초기 자본을 SPC 구조를 통해 정당하게 집행할 수 있습니다.</li>
-    <li><strong>법인 가치 축적:</strong> 독립 법인이므로 사업이 성장할수록 법인 자체 기업가치가 누적됩니다. 중장기적으로 외부 투자 유치, M&A, 향후 IPO 옵션이 열립니다.</li>
-    <li><strong>입찰 전문성:</strong> 아파트 커뮤니티 시설 운영권은 입주자대표회의 경쟁 입찰 방식으로 배분됩니다. 이 프로세스를 정확히 파악하고 계약을 설계할 수 있는 황해의 전문성이 진입의 핵심입니다.</li>
+    <li><strong>선례 방지:</strong> 기존 법인에서 직접 투자 시 향후 유사 요청의 선례가 됩니다. SPC를 통해 이 건만의 독립 구조임을 명확히 합니다.</li>
+    <li><strong>자본 규모 확대:</strong> SPC 구조를 통해 향후 단지 확장에 필요한 자본을 단계적으로 확충할 수 있습니다.</li>
+    <li><strong>법인 가치 축적:</strong> 독립 법인이므로 사업이 성장할수록 기업가치가 누적됩니다. 중장기적으로 외부 투자 유치, M&A, IPO 옵션이 열립니다.</li>
+    <li><strong>입찰 전문성:</strong> 아파트 커뮤니티 시설 운영권은 입대의 경쟁 입찰 방식으로 배분됩니다. 황해의 아파트 법무 전문성이 진입의 핵심입니다.</li>
   </ul>
 </div>
 
-<!-- 02 지배구조 -->
+<!-- 02 -->
 <div class="section">
   <div class="section-num">SECTION 02</div>
   <div class="section-title">지배구조 — 아파트너가 안전하게 통제하는 구조</div>
-  <p class="section-lead">아파트너가 과반 이상의 지분을 보유하므로 경영 의사결정에서 항상 최종 결정권을 갖습니다. 대표이사는 황해 소속으로 영업과 실무를 책임지며, 아파트너 주주의 판단에 따라 언제든 교체 가능합니다. 황해는 30% 지분으로 사업 기여분을 인정받되, 영업 성과에 대한 실질적 책임을 부담합니다.</p>
+  <p class="section-lead">아파트너가 70% 지분으로 주주총회 과반 이상을 확보합니다. 대표이사는 황해 국장 성현우 씨가 겸임하며 SPC 인건비가 들지 않습니다. 경영 방향이 맞지 않을 경우 아파트너 단독으로 대표이사를 교체할 수 있습니다. 황해는 30% 지분으로 사업 기여를 인정받되, 영업 성과에 대한 실질적 책임을 부담합니다.</p>
 
-  <div class="h3">지분 구조</div>
+  <div class="h3">지분 구조 (아파트너 70 : 황해 30)</div>
   <table>
-    <thead><tr><th>주주</th><th>지분율</th><th>출자금 (5억 기준)</th><th>권한 및 책임</th></tr></thead>
+    <thead><tr><th>주주</th><th>지분율</th><th>출자금 (1억 기준)</th><th>권한 및 책임</th></tr></thead>
     <tbody>
-      <tr>
-        <td><strong>아파트너</strong></td>
-        <td class="em">70%</td>
-        <td>3억 5,000만원</td>
-        <td>최대주주 · 이사회 과반 · 대표이사 교체권 보유</td>
-      </tr>
-      <tr>
-        <td><strong>법무법인 더 에이치 황해</strong></td>
-        <td>30%</td>
-        <td>1억 5,000만원</td>
-        <td>영업 채널 기여 · 입찰 설계 · 수임 채널 연계 책임</td>
-      </tr>
+      <tr><td><strong>아파트너</strong></td><td class="em">70%</td><td>7,000만원</td><td>최대주주 · 이사회 과반 · 대표이사 교체권 보유</td></tr>
+      <tr><td><strong>법무법인 더 에이치 황해</strong></td><td>30%</td><td>3,000만원</td><td>영업 채널 기여 · 입찰 설계 · 수임 채널 연계 책임</td></tr>
     </tbody>
   </table>
 
-  <div class="info-box">
-    <strong>아파트너 리스크 최소화 포인트:</strong> 황해 지분 30%의 의미는 "황해가 영업 성과를 내면 그 기여를 배당으로 인정받는다"는 것입니다. 황해가 영업에 소홀하거나 경영 방향이 맞지 않을 경우, 아파트너는 주주총회 단독 의결로 대표이사를 교체하고 사업 방향을 재설정할 수 있습니다. 지분 구조 자체가 황해의 자발적 성과 동기를 보장하는 설계입니다.
-  </div>
-
   <div class="h3">대표이사: 성현우 (법무법인 더 에이치 황해 국장)</div>
   <ul class="list">
-    <li>황해 국장 직위를 유지하며 SPC 대표이사를 겸임합니다. SPC가 황해 인건비를 별도 지급하지 않으므로, SPC의 고정비 부담이 없습니다.</li>
-    <li>황해의 200개 단지 네트워크 및 영업 사무장 채널과 긴밀히 연결되어 있어, 신규 단지 발굴과 도입 협의를 즉시 시작할 수 있습니다.</li>
-    <li>아파트너와 황해 양측 모두와 사업적 협력 관계를 유지하면서 중립적으로 컨소시엄을 이끌 수 있는 위치입니다.</li>
-    <li>경영 판단 불일치 시 아파트너가 주주총회를 통해 대표이사를 교체할 수 있으므로, 아파트너의 사업 통제권은 항상 유지됩니다.</li>
+    <li>황해 국장 직위를 유지하며 SPC 대표이사를 겸임합니다. SPC는 인건비를 별도 지급하지 않으므로 고정비 절감 효과가 있습니다.</li>
+    <li>황해의 200개 단지 네트워크 및 영업 사무장 채널과 긴밀히 연결되어 신규 단지 발굴과 도입 협의를 즉시 시작할 수 있습니다.</li>
+    <li>경영 판단 불일치 시 아파트너가 주주총회를 통해 대표이사를 교체할 수 있어, 아파트너의 사업 통제권은 항상 유지됩니다.</li>
+    <li><strong>영업 책임:</strong> 황해 채널을 통한 단지 확보는 황해 측 책임입니다. 성과가 없으면 배당도 없는 구조입니다.</li>
   </ul>
 </div>
 
-<!-- 03 영업 인력 공유 구조 -->
+<!-- 03 -->
 <div class="section">
   <div class="section-num">SECTION 03</div>
-  <div class="section-title">영업 채널 공유 구조 — 영업은 이미 우리에게 있다</div>
-  <p class="section-lead">SPC는 별도 영업 인력을 채용하지 않습니다. 두 파트너사가 이미 보유한 채널이 영업 기능 전체를 담당합니다. 이는 단순히 비용 절감의 문제가 아니라, 기존 신뢰 관계 위에서 진행되는 영업이므로 전환율과 속도 면에서도 유리합니다.</p>
+  <div class="section-title">영업 채널 공유 — 영업은 이미 우리에게 있다</div>
+  <p class="section-lead">SPC는 별도 영업 인력을 채용하지 않습니다. 두 파트너사의 기존 채널이 영업 기능 전체를 담당합니다. 처음 보는 영업사원의 방문이 아니라, 이미 신뢰가 쌓인 파트너가 제안하는 구조이므로 전환율과 도입 속도 모두 압도적으로 유리합니다.</p>
 
-  <div class="h3">아파트너 측 채널 — 앱 기반 영업 조직</div>
+  <div class="h3">아파트너 측 채널</div>
   <ul class="list">
-    <li><strong>아파트너/아파트허브 영업컨설팅팀:</strong> 전국 아파트 단지 입주자대표회의, 관리사무소를 직접 방문하는 B2B 영업 전문 인력이 이미 구성되어 있습니다. 이들이 기존 단지 방문 시 WPS 카페 도입 제안을 병행하는 방식으로, SPC의 추가 비용 없이 영업이 진행됩니다.</li>
-    <li><strong>앱 연동 인센티브:</strong> 아파트너는 카페 도입 단지에서 입주민이 아파트너 앱으로 음료를 사전 주문하게 함으로써 DAU(일 활성 사용자)가 증가하고 커머스 수익도 확보됩니다. 즉, 아파트너 영업팀은 WPS 카페를 팔수록 자사 앱 지표도 올라가는 구조로, 자발적 영업 동기가 내재화되어 있습니다.</li>
+    <li><strong>영업컨설팅팀 공유:</strong> 아파트너·아파트허브 소속 영업팀이 전국 단지 방문 시 WPS 카페 도입 제안을 병행합니다. SPC의 추가 비용 없이 영업이 진행됩니다.</li>
+    <li><strong>앱 연동 인센티브:</strong> 카페 도입 단지에서 입주민이 아파트너 앱으로 음료를 사전 주문하게 되면 DAU(일 활성 사용자)가 증가합니다. 영업팀이 WPS 카페를 팔수록 자사 앱 지표도 올라가는 구조로 자발적 동기가 내재화되어 있습니다.</li>
   </ul>
 
   <div class="h3">황해 측 채널 — 200개 단지 법무 신뢰 네트워크</div>
   <ul class="list">
-    <li><strong>200개 이상 단지 직접 관계:</strong> 황해는 현재 전국 약 200개 단지와 하자조사, 집단소송, 집단등기 업무를 통해 직접 수임 관계를 맺고 있습니다. 해당 단지의 입주자대표회의 임원 및 관리사무소장과 이미 대면 신뢰 관계가 형성되어 있습니다.</li>
-    <li><strong>영업 사무장의 자연스러운 병행 제안:</strong> 황해 소속 영업 사무장들은 단지 방문 시 법무 업무 협의와 함께 WPS 카페 도입 제안을 자연스럽게 병행할 수 있습니다. 처음 보는 영업사원이 방문하는 것과 이미 신뢰가 쌓인 담당 사무장이 제안하는 것은 전환율에서 근본적인 차이가 있습니다.</li>
-    <li><strong>황해의 자발적 동기:</strong> WPS 카페가 입점한 단지는 황해의 잠재 수임 채널이기도 합니다. 입대의 임원과의 접점이 늘어날수록 집단소송·하자조사 수임 기회가 늘어나므로, 황해는 SPC 성장이 곧 자사 매출에도 기여한다는 구조를 갖습니다.</li>
+    <li><strong>200개 이상 직접 수임 관계:</strong> 황해는 하자조사, 집단소송, 집단등기 업무를 통해 전국 약 200개 단지의 입대의 임원·관리사무소장과 이미 대면 신뢰 관계를 형성하고 있습니다.</li>
+    <li><strong>사무장의 자연스러운 병행 제안:</strong> 황해 영업 사무장이 기존 업무 방문 시 WPS 카페 도입을 함께 제안합니다. 신뢰 관계 기반이므로 냉수가 아닙니다.</li>
+    <li><strong>황해의 자발적 동기:</strong> WPS 카페 입점 단지 = 황해의 잠재 수임 채널. 단지 확보가 곧 황해 매출에도 기여하므로 자발적 협조 구조가 완성됩니다.</li>
   </ul>
 
-  <div class="h3">두 채널 합산 영업 파이프라인</div>
+  <div class="h3">합산 연간 신규 단지 목표</div>
   <table>
-    <thead><tr><th>채널</th><th>현재 커버 가능 단지</th><th>연간 신규 발굴 목표</th><th>비고</th></tr></thead>
+    <thead><tr><th>채널</th><th>커버 단지</th><th>연간 목표</th><th>비고</th></tr></thead>
     <tbody>
-      <tr><td><strong>아파트너 영업팀</strong></td><td>전국 앱 등록 단지 (수천 개)</td><td>15개</td><td>기존 영업 방문 시 병행 제안</td></tr>
-      <tr><td><strong>황해 사무장 채널</strong></td><td>200개 (현재 수임 단지)</td><td>10개</td><td>신뢰 관계 기반, 전환율 우위</td></tr>
-      <tr><td><strong>관리업체 B2B (중기)</strong></td><td>관리업체 자체 관리 단지</td><td>10개+</td><td>2027년 구독 모델 론칭 후</td></tr>
-      <tr><td class="em">합계</td><td class="em">—</td><td class="em">연 25~35개</td><td>전담 영업 인력 0명</td></tr>
+      <tr><td>아파트너 영업팀</td><td>앱 등록 전국 단지</td><td>15개</td><td>기존 방문 병행</td></tr>
+      <tr><td>황해 사무장 채널</td><td>수임 단지 200개+</td><td>10개</td><td>신뢰 기반, 전환율 우위</td></tr>
+      <tr><td>관리업체 B2B (중기)</td><td>관리업체 관리 단지</td><td>10개+</td><td>2027년 구독 모델 이후</td></tr>
+      <tr><td class="em">합계</td><td class="em">—</td><td class="em">연 25~35개</td><td class="em">전담 영업 인력 0명</td></tr>
     </tbody>
   </table>
-
-  <div class="h3">영업 인력 공유 구조 플로우</div>
-  <div class="flow-row">
-    <div class="flow-node">아파트너<br>영업컨설팅팀</div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-node accent-node">신규 단지<br>발굴 · 제안</div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-node">입대의 의결<br>or 빠른 협의</div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-node">SPC 계약<br>체결</div>
-  </div>
-  <div class="flow-row" style="margin-top:8px">
-    <div class="flow-node">황해<br>영업 사무장</div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-node accent-node">기존 단지<br>신뢰 기반 제안</div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-node">황해 수임<br>채널 확대</div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-node">SPC 계약<br>체결</div>
-  </div>
 </div>
 
-<!-- 04 고정비 구조 -->
+<!-- 04 -->
 <div class="section">
   <div class="section-num">SECTION 04</div>
   <div class="section-title">고정비 구조 — 단지가 늘어도 본사 비용은 그대로</div>
-  <p class="section-lead">SPC의 본사 고정비는 월 400만원입니다. 이 수치는 단지가 1개든 50개든 변하지 않도록 구조적으로 설계되어 있습니다. 대표이사 인건비가 없고, 전담 영업 인력이 없으며, 운영 인력도 없기 때문입니다. 고정비 400만원은 영업 경비, 사무실, 회계·법무 외주로만 구성됩니다.</p>
 
-  <div class="h3">월 고정비 구성</div>
+  <div class="h3">월 고정비 구성 (400만원)</div>
   <table>
     <thead><tr><th>항목</th><th>월 비용</th><th>설명</th></tr></thead>
     <tbody>
       <tr><td>대표이사 인건비</td><td class="em">0원</td><td>황해 국장 겸직 유지 — SPC 직접 지급 없음</td></tr>
-      <tr><td>영업 인건비</td><td class="em">0원</td><td>아파트너·황해 채널 공유 — SPC 별도 영업 인력 없음</td></tr>
-      <tr><td>운영 인건비</td><td class="em">0원</td><td>전문 위탁 운영사 담당 — SPC는 계약·정산만 관리</td></tr>
-      <tr><td>영업 경비 (출장·접대·제안서)</td><td>150만원</td><td>대표이사 현장 방문, 신규 단지 제안 활동</td></tr>
+      <tr><td>영업 인건비</td><td class="em">0원</td><td>아파트너·황해 채널 공유</td></tr>
+      <tr><td>운영 인건비</td><td class="em">0원</td><td>전문 위탁사 담당</td></tr>
+      <tr><td>영업 경비 (출장·접대·제안서)</td><td>150만원</td><td>신규 단지 현장 방문·협의</td></tr>
       <tr><td>사무실 임차</td><td>100만원</td><td>공유오피스 기준</td></tr>
-      <tr><td>회계·법무·세무 외주</td><td>150만원</td><td>월 기장, 분기 세무 신고, 계약서 검토</td></tr>
+      <tr><td>회계·법무·세무 외주</td><td>150만원</td><td>월 기장, 분기 신고, 계약서 검토</td></tr>
       <tr><td class="em">합계</td><td class="em">400만원/월</td><td class="em">단지 수와 무관하게 고정</td></tr>
     </tbody>
   </table>
 
   <div class="info-box">
-    <strong>왜 이 구조가 '영원히' 낮게 유지될 수 있는가:</strong><br><br>
-    일반적인 스타트업은 성장할수록 영업 인력·CS 인력을 추가 채용하며 고정비가 증가합니다. WPS SPC는 구조적으로 다릅니다. 영업은 파트너사 채널이 담당하고, 운영은 위탁사가 담당하며, 경영은 겸임 대표이사가 수행합니다. 단지가 10개가 되든 50개가 되든 SPC 본사에 신규 고용이 발생하지 않습니다. 이 구조가 사업의 레버리지 핵심입니다 — 매출은 단지 수에 비례해 증가하지만, 비용은 늘어나지 않습니다.
+    <strong>왜 영원히 낮게 유지되는가:</strong> 매출은 단지 수에 비례해 증가하지만 SPC 본사에는 신규 고용이 발생하지 않습니다. 영업은 파트너사 채널, 운영은 위탁사, 경영은 겸임 대표이사. 이 구조가 사업의 레버리지 핵심입니다.
   </div>
+</div>
 
-  <div class="h3">단지당 운영 비용 구조 (별도)</div>
-  <p style="color:var(--sub);font-size:13px;margin:8px 0 12px;">각 단지의 카페 운영 비용은 SPC 본사 고정비와 별개입니다. 단지별 손익은 해당 카페 매출에서 직접 차감됩니다.</p>
+<!-- 05 -->
+<div class="section">
+  <div class="section-num">SECTION 05</div>
+  <div class="section-title">수입 구조 — 쿠폰 선납 고정 수입 + 현장 판매</div>
+  <p class="section-lead">이 사업의 가장 큰 차별점은 쿠폰 선납 수입입니다. 입대의가 관리비에서 매월 쿠폰 대금을 미리 지불하므로, SPC는 실제 카페 방문객 수와 무관하게 고정 수입을 매월 확보합니다. 여기에 현장 현금·카드 판매가 추가됩니다.</p>
+
+  <div class="h3">수입 구조 2원화</div>
   <table>
-    <thead><tr><th>항목</th><th>부담 주체</th><th>비고</th></tr></thead>
+    <thead><tr><th>수입 유형</th><th>금액 (세대당)</th><th>특징</th></tr></thead>
     <tbody>
-      <tr><td>재료비 (원두·우유·시럽 등)</td><td>SPC (단지별)</td><td>매출의 약 40%</td></tr>
-      <tr><td>카페 운영 인력</td><td>위탁 운영사</td><td>SPC와 별도 계약, 위탁사 고용</td></tr>
-      <tr><td>커피 설비 (머신·그라인더)</td><td>SPC 소유</td><td>리스 또는 직구매</td></tr>
-      <tr><td>단지 임차료</td><td>협의 (SPC 또는 0원)</td><td>단지 협력형: 무상 제공 조건</td></tr>
+      <tr><td><strong>쿠폰 선납 수입</strong></td><td>4,500원/세대/월<br>(3장 × 1,500원)</td><td>입대의가 관리비에서 미리 납부. 방문 여부와 무관하게 SPC에 확정 귀속. 미사용 쿠폰 = 순이익</td></tr>
+      <tr><td><strong>현장 현금·카드 판매</strong></td><td>방문객 수 × 평균 단가</td><td>아메리카노 기준 3,000원. 라떼·푸드류 추가 판매로 객단가 상승</td></tr>
+    </tbody>
+  </table>
+
+  <div class="h3">쿠폰 수입 상세</div>
+  <ul class="list">
+    <li><strong>쿠폰 발행 기준:</strong> 세대당 월 3장, 장당 입주민 결제 단가 1,500원(아메리카노 50% 할인)</li>
+    <li><strong>입대의 월 납부액:</strong> 세대수 × 3장 × 1,500원 (예: 1,000세대 → 월 450만원 고정 수입)</li>
+    <li><strong>쿠폰 사용률 가정:</strong> 약 70%. 미사용 30%는 SPC 추가 이익 (음료 제공 없이 수입만 발생)</li>
+    <li><strong>쿠폰 사용 원가:</strong> 장당 아메리카노 재료비 약 1,200원 (원가율 40% 기준)</li>
+  </ul>
+
+  <div class="h3">메뉴 믹스 및 평균 단가 (현금 구매 기준)</div>
+  <table>
+    <thead><tr><th>메뉴</th><th>비율</th><th>단가</th><th>기여</th></tr></thead>
+    <tbody>
+      <tr><td>아메리카노</td><td>40%</td><td>3,000원</td><td>1,200원</td></tr>
+      <tr><td>라떼·카푸치노류</td><td>30%</td><td>4,000원</td><td>1,200원</td></tr>
+      <tr><td>기타 음료 (스무디·차류)</td><td>20%</td><td>4,500원</td><td>900원</td></tr>
+      <tr><td>푸드 (빵·샌드위치)</td><td>10%</td><td>4,500원</td><td>450원</td></tr>
+      <tr><td class="em">가중 평균 단가</td><td class="em">—</td><td class="em">3,750원</td><td class="em">—</td></tr>
     </tbody>
   </table>
 </div>
 
-<!-- 05 단지 도입 모델 -->
+<!-- 06 -->
 <div class="section">
-  <div class="section-num">SECTION 05</div>
-  <div class="section-title">단지 도입 모델 — 두 가지 선택지, 하나의 결과</div>
-  <p class="section-lead">각 단지의 재정 상황과 의결 속도에 따라 두 가지 도입 모델 중 선택합니다. 어떤 모델을 선택하든 최종 결과는 동일합니다 — SPC가 카페를 운영하고, 수익을 단지와 나눕니다. 두 모델의 차이는 인테리어 비용을 누가 부담하느냐, 그리고 그에 따라 초기 수익 배분 비율이 어떻게 달라지느냐입니다.</p>
+  <div class="section-num">SECTION 06</div>
+  <div class="section-title">단지 도입 모델 — 인테리어 비용 세대수 연동 차등화</div>
 
-  <div class="h3">인테리어 비용 근거</div>
+  <div class="h3">세대수별 인테리어 비용 기준</div>
+  <p style="color:var(--sub);font-size:13px;margin:6px 0 12px;">카페 인테리어 평당 단가 약 150만원 기준. 단지 규모에 따라 필요 면적과 설비가 달라집니다. 아파트 커뮤니티 시설은 기본 설비가 기설치된 경우가 많아 일부 절감 가능합니다.</p>
   <table>
-    <thead><tr><th>구분</th><th>금액</th><th>근거</th></tr></thead>
+    <thead><tr><th>단지 규모</th><th>권장 카페 면적</th><th>인테리어 공사</th><th>설비 (머신·장비)</th><th>총 초기 투자</th></tr></thead>
     <tbody>
-      <tr><td>인테리어 공사 (20평 기준)</td><td>3,000만원</td><td>2025년 카페 인테리어 시공 평당 약 120~150만원. 아파트 커뮤니티 시설은 기본 설비 기설치로 일부 절감 가능하나, WPS 브랜드 가이드라인 충족 필요하여 보수적 예산 적용</td></tr>
-      <tr><td>커피 설비 (머신·그라인더·제빙기 등)</td><td>1,500만원</td><td>WPS 기준 에스프레소 머신 포함 풀세트</td></tr>
-      <tr><td class="em">단지당 총 초기 투자</td><td class="em">4,500만원</td><td>SPC 선투자형 기준</td></tr>
+      <tr><td>500세대 이하</td><td>10평</td><td>1,500만원</td><td>1,500만원</td><td class="em">3,000만원</td></tr>
+      <tr><td>1,000세대</td><td>15평</td><td>2,250만원</td><td>1,500만원</td><td class="em">3,750만원</td></tr>
+      <tr><td>3,000세대</td><td>20평</td><td>3,000만원</td><td>1,500만원</td><td class="em">4,500만원</td></tr>
+      <tr><td>5,000세대</td><td>25평</td><td>3,750만원</td><td>1,500만원</td><td class="em">5,250만원</td></tr>
     </tbody>
   </table>
 
@@ -468,246 +329,227 @@ td.center, th.center { text-align: center; }
     <div class="card">
       <div class="card-title">SPC 선투자형</div>
       <ul class="list">
-        <li><strong>구조:</strong> SPC가 인테리어·설비 비용 전액(4,500만원) 선지급. 단지는 공간만 무상 제공</li>
-        <li><strong>초기 배분:</strong> 투자 회수 완료 전까지 SPC 70% : 단지 30%. 회수 후 50:50으로 전환</li>
-        <li><strong>회수 기간:</strong> 단지당 월 SPC 수익 595만원 기준 약 7~8개월 (로봇 도입 후)</li>
-        <li><strong>장점:</strong> 도입 허들 최저. 단지 예산 부담 없어 영업 전환율이 가장 높음</li>
-        <li><strong>적합 대상:</strong> 입대의 예산이 없거나 빠른 도입을 원하는 단지</li>
+        <li><strong>구조:</strong> SPC가 인테리어·설비 전액 선지급. 단지는 공간만 무상 제공</li>
+        <li><strong>초기 배분:</strong> 투자 회수 완료 전 SPC 70% : 단지 30%</li>
+        <li><strong>회수 후:</strong> 50:50 전환</li>
+        <li><strong>장점:</strong> 도입 허들 최저, 영업 전환율 우위</li>
       </ul>
     </div>
     <div class="card">
       <div class="card-title">단지 협력형</div>
       <ul class="list">
-        <li><strong>구조:</strong> 단지가 인테리어 비용(3,000만원) 부담. SPC는 설비(1,500만원)만 부담</li>
-        <li><strong>초기 배분:</strong> 단지 기여분에 비례하여 처음부터 단지 40% : SPC 60% (단지에 유리한 조건)</li>
-        <li><strong>SPC 초기 투자:</strong> 단지당 1,500만원으로 절감 → 같은 자본으로 더 많은 단지 확장 가능</li>
-        <li><strong>장점:</strong> 단지의 당사자성이 높아 운영 협조도 및 프로모션 참여 우수</li>
-        <li><strong>적합 대상:</strong> 관리비 예산 여유 있는 단지, 자체 리모델링 계획 보유 단지</li>
+        <li><strong>구조:</strong> 단지가 인테리어 부담. SPC는 설비(1,500만원)만 부담</li>
+        <li><strong>배분:</strong> 처음부터 단지 40% : SPC 60%</li>
+        <li><strong>SPC 투자:</strong> 단지당 1,500만원으로 절감 → 더 많은 단지 확장 가능</li>
+        <li><strong>장점:</strong> SPC 자본 소요 최소화, 단지 당사자성 높음</li>
       </ul>
     </div>
   </div>
-
-  <div class="h3">공통 운영 구조 비교</div>
-  <table>
-    <thead><tr><th>항목</th><th>SPC 선투자형</th><th>단지 협력형</th></tr></thead>
-    <tbody>
-      <tr><td>인테리어 비용 부담</td><td>SPC (3,000만원)</td><td>단지 (3,000만원)</td></tr>
-      <tr><td>설비 비용 부담</td><td>SPC (1,500만원)</td><td>SPC (1,500만원)</td></tr>
-      <tr><td>SPC 총 투자</td><td>4,500만원</td><td>1,500만원</td></tr>
-      <tr><td>초기 SPC 배분율</td><td>70% (회수 기간 중)</td><td>60% (고정)</td></tr>
-      <tr><td>카페 운영 주체</td><td colspan="2" class="center">SPC (위탁 운영사 계약)</td></tr>
-      <tr><td>도입 소요 기간</td><td>1개월 이내</td><td>2~3개월 (입대의 의결 포함)</td></tr>
-    </tbody>
-  </table>
 </div>
 
-<!-- 06 부가 가치 -->
-<div class="section">
-  <div class="section-num">SECTION 06</div>
-  <div class="section-title">부가 가치 및 영업 시너지 흐름</div>
-  <p class="section-lead">WPS 카페 도입은 단순한 카페 운영 그 이상입니다. 단지가 늘어날수록 아파트너의 앱 사용자 수가 증가하고, 황해의 소송 수임 기회가 늘어납니다. 파트너사들이 자발적으로 신규 단지 영업에 협조하게 되는 자기강화 구조입니다.</p>
-
-  <div class="card-grid3">
-    <div class="card">
-      <div class="card-title">아파트너 앱 주문 연동</div>
-      <ul class="list">
-        <li>입주민이 아파트너 앱으로 음료 사전 주문 및 픽업</li>
-        <li>아파트너: DAU 증가, 커머스 수수료 수익</li>
-        <li>입주민: 편의성 향상 → 앱 충성도 상승</li>
-        <li>SPC: 주문량 증가, 대기 감소로 회전율 개선</li>
-      </ul>
-    </div>
-    <div class="card">
-      <div class="card-title">황해 수임 채널 확대</div>
-      <ul class="list">
-        <li>카페 도입 단지 = 황해가 입대의와 신뢰 관계를 이미 구축한 단지</li>
-        <li>집단소송·하자조사·집단등기 수임 자연스럽게 연결</li>
-        <li>황해: 영업비 없이 수임 확보</li>
-        <li>SPC: 황해가 영업 인력 역할 수행</li>
-      </ul>
-    </div>
-    <div class="card">
-      <div class="card-title">관리업체 B2B (중기)</div>
-      <ul class="list">
-        <li>SPC 운영 단지가 20개+ 되면 관리업체와 구독 계약</li>
-        <li>관리업체: 자사 관리 단지에 카페 도입 실적 → 경쟁 차별화</li>
-        <li>구독 모델: 단지당 20~25만원/월</li>
-        <li>관리업체가 직접 영업 → 확장 속도 가속</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="h3">시너지 순환 구조</div>
-  <table>
-    <thead><tr><th>단지 수 증가</th><th>아파트너 효과</th><th>황해 효과</th><th>SPC 효과</th></tr></thead>
-    <tbody>
-      <tr><td>10개</td><td>앱 연동 단지 10개 → DAU +20%</td><td>수임 파이프라인 10개 확보</td><td>월 순수익 8,100만원</td></tr>
-      <tr><td>20개</td><td>커머스 수익 실질화, 영업팀 협조 강화</td><td>연 10건 이상 수임 연결 가능</td><td>월 순수익 1.66억</td></tr>
-      <tr><td>50개</td><td>앱 핵심 기능으로 자리잡음</td><td>법무 네트워크 전국화</td><td>월 순수익 4.2억</td></tr>
-    </tbody>
-  </table>
-</div>
-
-<!-- 07 브랜드 전략 -->
+<!-- 07 -->
 <div class="section">
   <div class="section-num">SECTION 07</div>
-  <div class="section-title">브랜드 전략 — 단계별 포트폴리오 고도화</div>
-  <p class="section-lead">운영 단지 수는 브랜드 협상의 핵심 레버리지입니다. 처음에는 검증된 국내 프리미엄 브랜드로 시작하여 운영 노하우와 단지 신뢰를 쌓고, 단지 수가 일정 규모에 도달하면 해외 하이엔드 브랜드와의 독점·우선 입점 협상으로 전환합니다.</p>
+  <div class="section-title">브랜드 전략 — 네슬레 독점 판권이 핵심 자산이 된다</div>
+  <p class="section-lead">단지 수가 쌓일수록 브랜드 협상의 레버리지가 커집니다. 단기에는 검증된 국내 브랜드로 운영 노하우를 확보하고, 중장기에는 네슬레 독점 원두 공급 계약을 목표로 합니다. 네슬레 판권이 성사되는 순간, SPC는 단순 카페 위탁 운영사에서 국내 프리미엄 커피 유통 플랫폼으로 도약합니다.</p>
 
-  <div class="h3">1단계 — 국내 검증 프리미엄 브랜드 (2026~2027)</div>
+  <div class="h3">1단계 — 국내 검증 브랜드 (2026~2027)</div>
   <ul class="list">
-    <li><strong>대상:</strong> 폴바셋, 커피빈, 이디야, 탐앤탐스 프리미엄 등 국내 인지도 높은 브랜드</li>
-    <li><strong>협상 방식:</strong> 향후 도입 예정 단지 수를 제시하여 원두 원가 우선 공급 협상. 10단지 계약 선 체결 시 단가 협상력 확보 가능</li>
-    <li><strong>입주민 반응:</strong> 단지 입주민 선호도 조사 선행, 수요 있는 브랜드 우선 도입 → 도입 후 이탈률 최소화</li>
+    <li>폴바셋, 커피빈, 탐앤탐스 프리미엄 등 국내 인지도 높은 브랜드로 시작</li>
+    <li>도입 예정 단지 수를 선제적으로 제시하여 원두 원가 우선 공급 협상</li>
+    <li>입주민 선호도 조사 선행 → 실수요 있는 브랜드 우선 도입</li>
   </ul>
 
-  <div class="h3">2단계 — 해외 하이엔드 브랜드 국내 첫 입점 (2027~2028)</div>
+  <div class="h3">2단계 — 해외 하이엔드 브랜드 첫 입점 (2027~2028)</div>
   <ul class="list">
-    <li><strong>목표:</strong> "우리 단지에만 있는 카페"라는 독점성이 핵심. 국내 미출시 또는 한정 출시된 해외 프리미엄 카페 브랜드 발굴</li>
-    <li><strong>협상 레버리지:</strong> SPC의 단지 네트워크(세대수·구매력 데이터)를 제시 → 브랜드의 국내 진출 레퍼런스 역할 담당</li>
-    <li><strong>효과:</strong> 입주민 만족도·자부심 증가 → 단지 도입 영업 시 "저 단지에 있는 그 카페" 입소문 효과</li>
+    <li>국내 미출시 또는 한정 출시 해외 프리미엄 카페 브랜드 발굴</li>
+    <li>SPC의 단지 네트워크(세대수·구매력 데이터)를 국내 진출 레퍼런스로 제시</li>
+    <li>"우리 단지에만 있는 카페" 독점성 → 입주민 자부심·입소문 효과</li>
   </ul>
 
-  <div class="h3">3단계 — 네슬레(Nestlé) 독점 공급 협상 (2028~)</div>
+  <div class="h3">3단계 — 네슬레(Nestlé) 독점 원두 판권 협상 (2028~) <span class="tag">핵심 자산</span></div>
+
+  <div class="info-box">
+    <strong>네슬레 판권이 중요한 이유:</strong><br><br>
+    네슬레는 Nespresso, 스타벅스 원두(RTD 제외), Nescafé Dolce Gusto 등 국내 프리미엄 커피 소비자에게 가장 친숙한 글로벌 커피 브랜드 포트폴리오를 보유하고 있습니다. SPC가 네슬레와 <strong>1~2년 독점 원두 공급 계약</strong>을 체결하면 두 가지 이점이 동시에 발생합니다.<br><br>
+    첫째, <strong>원가 경쟁력:</strong> 네슬레로부터 대량 공급 계약 기반으로 단가를 낮추면 단지당 원가율이 개선됩니다.<br>
+    둘째, <strong>브랜드 프리미엄:</strong> "네슬레 독점 공급 아파트 단지 카페"라는 포지셔닝은 입주민에게 강력한 차별점이 되며, 신규 단지 영업 시 핵심 설득 포인트가 됩니다.<br><br>
+    네슬레 입장에서도 전국 50개 대단지(세대당 구매력 상위층) 접점은 가치 있는 유통 채널입니다. 협상 수용 가능성이 있습니다.
+  </div>
+
   <ul class="list">
-    <li><strong>목표:</strong> 운영 단지 수 + 누적 입주민 데이터를 근거로 Nespresso·스타벅스 원두 라인업 독점 공급 계약 1~2년 기간 협상</li>
-    <li><strong>미성사 시 대안:</strong> 복수 하이엔드 브랜드 동시 운영으로 즉시 전환. 포트폴리오 다각화로 오히려 리스크 분산 가능</li>
-    <li><strong>성사 시 효과:</strong> 브랜드 프리미엄 + 원가 경쟁력 동시 확보 → 단지당 수익률 추가 개선</li>
+    <li><strong>협상 타이밍:</strong> 30개 단지 운영 시점 — 세대수 합계 약 60,000세대 이상 확보 후 협상력 극대화</li>
+    <li><strong>협상 조건:</strong> 1~2년 독점 공급 계약, 단가 우선권, 브랜드 마케팅 지원 요청</li>
+    <li><strong>미성사 시:</strong> 복수 하이엔드 브랜드 동시 운영으로 즉시 전환 — 리스크 없음</li>
+    <li><strong>성사 시:</strong> 원가율 40% → 35% 수준 개선 기대. 전 단지 동시 적용으로 수익률 대폭 향상</li>
   </ul>
 </div>
 
-<!-- 08 로봇 바리스타 -->
+<!-- 08 -->
 <div class="section">
   <div class="section-num">SECTION 08</div>
-  <div class="section-title">로봇 바리스타 도입 전략 — 수익성 극대화의 핵심</div>
-  <p class="section-lead">카페 운영 수익을 갉아먹는 가장 큰 요소는 인건비입니다. 표준 단지 기준 월 인건비가 1,250만원(5인)으로, 전체 비용의 절반 이상을 차지합니다. 로봇 바리스타를 단계적으로 도입하면 인건비를 500만원(2인) 수준까지 낮출 수 있으며, 이것이 단지당 월 순수익을 100만원에서 850만원으로 끌어올리는 핵심 레버입니다.</p>
+  <div class="section-title">로봇 바리스타 도입 전략</div>
 
-  <div class="h3">로봇사와의 협상 구조</div>
+  <div class="h3">인건비가 수익성을 결정한다</div>
+  <p class="section-lead">세대수가 클수록 인건비 절대액이 커지고, 로봇 도입 효과도 극대화됩니다. 재무 시뮬레이션에서 확인하겠지만 현행 인건비 구조로는 3,000세대 이상이어야 Normal 기준 흑자가 가능합니다. 로봇 도입 후에는 1,000세대도 Best 기준 흑자 전환이 가능합니다.</p>
+
+  <div class="h3">세대수별 인력 및 인건비 (월)</div>
+  <table>
+    <thead><tr><th>단지 규모</th><th>현행 인력</th><th>현행 인건비</th><th>로봇 전환 후 인력</th><th>로봇 후 인건비</th><th>절감액</th></tr></thead>
+    <tbody>
+      <tr><td>500세대</td><td>2명</td><td>500만원</td><td>1명</td><td>250만원</td><td>250만원</td></tr>
+      <tr><td>1,000세대</td><td>3명</td><td>750만원</td><td>2명</td><td>500만원</td><td>250만원</td></tr>
+      <tr><td>3,000세대</td><td>5명</td><td>1,250만원</td><td>2명</td><td>500만원</td><td>750만원</td></tr>
+      <tr><td>5,000세대</td><td>7명</td><td>1,750만원</td><td>3명</td><td>750만원</td><td>1,000만원</td></tr>
+    </tbody>
+  </table>
+
+  <div class="h3">로봇사 협상 구조</div>
   <ul class="list">
-    <li><strong>SPC의 가치:</strong> 보유 단지 수 = 로봇 바리스타 업체의 가장 중요한 도입 레퍼런스</li>
-    <li><strong>협상안:</strong> SPC가 로봇 도입 레퍼런스를 제공하는 대신, 로봇사는 월 리스비 면제 또는 초기 일정 기간 지원</li>
-    <li><strong>로봇사 입장:</strong> 아파트 단지 내 커피 자동화는 아직 초기 시장. SPC가 레퍼런스가 되면 로봇사에도 막대한 홍보 효과 → 협상 수용 가능성 높음</li>
+    <li><strong>SPC의 가치:</strong> 보유 단지 수 = 로봇 바리스타 업체의 핵심 도입 레퍼런스</li>
+    <li><strong>협상안:</strong> SPC가 레퍼런스를 제공하는 대신, 로봇사는 월 리스비 면제 또는 초기 일정 기간 보전</li>
+    <li><strong>단계:</strong> 2027 Q1 피크타임 보조 파일럿 → 2027 Q3 부분 자동화 → 2028 전면 전환</li>
   </ul>
-
-  <div class="h3">단계적 전환 계획</div>
-  <table>
-    <thead><tr><th>단계</th><th>시점</th><th>내용</th><th>인력 구성</th></tr></thead>
-    <tbody>
-      <tr><td>현행</td><td>2026</td><td>인력 중심 운영</td><td>5명 (전일 3 + 파트 2)</td></tr>
-      <tr><td>부분 도입</td><td>2027 Q1</td><td>로봇 1~2대 피크타임 보조, 주문·제조 일부 자동화</td><td>3명</td></tr>
-      <tr><td>전면 전환</td><td>2027 Q4~</td><td>음료 제조 전면 로봇화, 최소 인력 감독 체계</td><td>2명</td></tr>
-    </tbody>
-  </table>
-
-  <div class="h3">인건비 절감 효과 (단지당)</div>
-  <table>
-    <thead><tr><th>항목</th><th>현행 (5인)</th><th>부분 도입 (3인)</th><th>전면 전환 (2인)</th></tr></thead>
-    <tbody>
-      <tr><td>월 인건비</td><td>1,250만원</td><td>750만원</td><td>500만원</td></tr>
-      <tr><td>절감액</td><td>—</td><td>500만원/월</td><td>750만원/월</td></tr>
-      <tr><td>단지당 월 순수익</td><td>+100만원</td><td>+600만원</td><td>+850만원</td></tr>
-    </tbody>
-  </table>
 </div>
 
 <!-- 09 재무 시뮬레이션 -->
 <div class="section">
   <div class="section-num">SECTION 09</div>
-  <div class="section-title">재무 시뮬레이션</div>
-  <p class="section-lead">모든 수치는 표준 대단지(1,500세대 이상) 기준입니다. 헬리오시티(9,510세대)는 규모 면에서 특이 케이스로, 표준 모델 재무 계획에 포함하지 않습니다. 로봇 도입 전후 손익, 인테리어 투자 회수 기간, 누적 단지 수별 월 순수익을 단계적으로 산출합니다.</p>
+  <div class="section-title">재무 시뮬레이션 — 세대수 × 시나리오 × 로봇 전환</div>
+  <p class="section-lead">헬리오시티(9,510세대)는 규모 면에서 특이 케이스로, 본 표준 모델 시뮬레이션에서 제외합니다. 전국 아파트 단지 규모 분포를 바탕으로 500세대·1,000세대·3,000세대·5,000세대 4개 기준점에서 Worst / Normal / Best 3가지 시나리오로 손익을 산출합니다.</p>
 
-  <div class="h3">표준 단지 월 손익 분석 (1,500세대 이상 기준)</div>
+  <div class="h3">전국 아파트 단지 규모 분포 (약 22,000개 기준)</div>
   <table>
-    <thead><tr><th>항목</th><th>현행 (5인)</th><th>로봇 부분 도입 (3인)</th><th>로봇 전면 전환 (2인)</th></tr></thead>
+    <thead><tr><th>규모</th><th>비율</th><th>단지 수 (추정)</th><th>WPS 적합성</th></tr></thead>
     <tbody>
-      <tr><td>월 매출</td><td colspan="3" class="center">2,500만원 (일 약 165잔 × 단가 5,000원 × 30일)</td></tr>
-      <tr><td>재료비 (40%)</td><td colspan="3" class="center">1,000만원</td></tr>
-      <tr><td>인건비</td><td>1,250만원</td><td>750만원</td><td>500만원</td></tr>
-      <tr><td>운영비 (2%)</td><td colspan="3" class="center">50만원</td></tr>
-      <tr><td>기타 (쿠폰·프로모션)</td><td colspan="3" class="center">100만원</td></tr>
-      <tr><td class="em">단지당 월 순수익</td><td class="em">+100만원</td><td class="em">+600만원</td><td class="em">+850만원</td></tr>
+      <tr><td>500세대 이하</td><td>약 45%</td><td>약 9,900개</td><td>수익성 불안정 — 비권장</td></tr>
+      <tr><td>500~1,000세대</td><td>약 30%</td><td>약 6,600개</td><td>로봇+Best 조건 시 가능</td></tr>
+      <tr><td>1,000~3,000세대</td><td>약 20%</td><td>약 4,400개</td><td>주요 타깃 — 안정적 수익</td></tr>
+      <tr><td>3,000세대 이상</td><td>약 5%</td><td>약 1,100개</td><td>핵심 타깃 — 최고 수익</td></tr>
+    </tbody>
+  </table>
+  <div class="info-box"><strong>시장 기회 요약:</strong> WPS 핵심 타깃(3,000세대 이상)은 전국 약 1,100개 단지입니다. 50개 도입은 이 시장의 약 4.5%에 해당하며, 충분히 달성 가능한 목표입니다.</div>
+
+  <div class="h3">수입·비용 모델 가정</div>
+  <table>
+    <thead><tr><th>항목</th><th>내용</th></tr></thead>
+    <tbody>
+      <tr><td>쿠폰 선납 단가</td><td>세대당 3장 × 1,500원 = <strong>4,500원/월 고정</strong></td></tr>
+      <tr><td>쿠폰 사용률</td><td>70% (미사용 30%는 SPC 순이익)</td></tr>
+      <tr><td>쿠폰 원가</td><td>1,200원/잔 (아메리카노 원가율 40%)</td></tr>
+      <tr><td>현금 평균 단가</td><td>3,750원 (메뉴 믹스 반영: 아메리카노 40%·라떼 30%·기타 음료 20%·푸드 10%)</td></tr>
+      <tr><td>현금 원가율</td><td>40%</td></tr>
+      <tr><td>운영비</td><td>단지 규모별 차등 (500세대 30만 / 1,000세대 50만 / 3,000세대 80만 / 5,000세대 120만)</td></tr>
     </tbody>
   </table>
 
-  <div class="h3">SPC 고정비 (본사)</div>
+  <div class="h3">시나리오별 현장 방문 가정 (일 잔 수, 현금 구매 기준)</div>
   <table>
-    <thead><tr><th>구성</th><th>금액</th></tr></thead>
+    <thead><tr><th>단지 규모</th><th>Worst (일)</th><th>Normal (일)</th><th>Best (일)</th></tr></thead>
     <tbody>
-      <tr><td>영업 경비 + 사무실 + 외주 합계</td><td class="em">400만원/월 (단지 수와 무관)</td></tr>
+      <tr><td>500세대</td><td>10잔</td><td>25잔</td><td>45잔</td></tr>
+      <tr><td>1,000세대</td><td>15잔</td><td>50잔</td><td>90잔</td></tr>
+      <tr><td>3,000세대</td><td>40잔</td><td>120잔</td><td>220잔</td></tr>
+      <tr><td>5,000세대</td><td>60잔</td><td>180잔</td><td>340잔</td></tr>
     </tbody>
   </table>
 
-  <div class="h3">인테리어 투자 회수 시뮬레이션 (SPC 선투자형 기준)</div>
-  <p style="color:var(--sub);font-size:12.5px;margin:8px 0 14px;">단지당 초기 투자 4,500만원, 투자 회수 기간 중 SPC 배분 70%(단지당 월 595만원 회수)</p>
+  <div class="h3">500세대 단지 월 손익</div>
   <table>
-    <thead><tr><th>투자 단지 수</th><th>총 투자금</th><th>SPC 월 회수액 합계</th><th>투자 전액 회수 기간</th><th>회수 후 월 순수익</th></tr></thead>
+    <thead><tr><th>항목</th><th>Worst</th><th>Normal</th><th>Best</th></tr></thead>
     <tbody>
-      <tr><td>3개</td><td>1.35억</td><td>1,785만원/월</td><td>약 7~8개월</td><td>2,150만원/월</td></tr>
-      <tr><td>5개</td><td>2.25억</td><td>2,975만원/월</td><td>약 7~8개월</td><td>3,850만원/월</td></tr>
-      <tr><td>10개</td><td>4.5억</td><td>5,950만원/월</td><td>약 7~8개월</td><td>8,100만원/월</td></tr>
-      <tr><td>20개</td><td>9억</td><td>1억 1,900만원/월</td><td>약 7~8개월</td><td>1억 6,600만원/월</td></tr>
+      <tr><td>쿠폰 선납 수입</td><td colspan="3" class="center">225만원 (고정)</td></tr>
+      <tr><td>현금 판매 수입</td><td>111만원</td><td>278만원</td><td>500만원</td></tr>
+      <tr><td>합계 수입</td><td>336만원</td><td>503만원</td><td>725만원</td></tr>
+      <tr><td>쿠폰 원가</td><td colspan="3" class="center">126만원</td></tr>
+      <tr><td>현금 원가</td><td>44만원</td><td>111만원</td><td>200만원</td></tr>
+      <tr><td>운영비</td><td colspan="3" class="center">30만원</td></tr>
+      <tr><td><strong>현행 인건비 (500만)</strong></td><td class="minus">-364만원</td><td class="minus">-264만원</td><td class="minus">-131만원</td></tr>
+      <tr><td><strong>로봇 후 인건비 (250만)</strong></td><td class="minus">-114만원</td><td class="minus">-14만원</td><td class="plus">+119만원 ✓</td></tr>
     </tbody>
   </table>
-  <p style="color:var(--sub);font-size:12.5px;margin:8px 0 24px;">투자 회수가 완료되면 배분 비율이 SPC 50% : 단지 50%로 전환되어 SPC 배분율은 낮아지지만 순수익 총액은 단지 누적 효과로 증가합니다.</p>
+  <div class="warn-box"><strong>500세대 결론:</strong> 현행 인건비로는 항상 적자. 로봇 도입 후 Best 케이스에서 월 119만원 소폭 흑자. 초기 타깃 제외를 권장합니다.</div>
 
-  <div class="h3">누적 단지 수별 월 순수익 (로봇 전면 전환, 고정비 차감)</div>
-  <p style="color:var(--sub);font-size:12.5px;margin:8px 0 16px;">단지당 순수익 850만원 × 단지 수 — SPC 고정비 400만원</p>
+  <div class="h3">1,000세대 단지 월 손익</div>
+  <table>
+    <thead><tr><th>항목</th><th>Worst</th><th>Normal</th><th>Best</th></tr></thead>
+    <tbody>
+      <tr><td>쿠폰 선납 수입</td><td colspan="3" class="center">450만원 (고정)</td></tr>
+      <tr><td>현금 판매 수입</td><td>167만원</td><td>555만원</td><td>999만원</td></tr>
+      <tr><td>합계 수입</td><td>617만원</td><td>1,005만원</td><td>1,449만원</td></tr>
+      <tr><td>쿠폰 원가</td><td colspan="3" class="center">252만원</td></tr>
+      <tr><td>현금 원가</td><td>67만원</td><td>222만원</td><td>400만원</td></tr>
+      <tr><td>운영비</td><td colspan="3" class="center">50만원</td></tr>
+      <tr><td><strong>현행 인건비 (750만)</strong></td><td class="minus">-502만원</td><td class="minus">-269만원</td><td class="minus">-3만원 (BEP)</td></tr>
+      <tr><td><strong>로봇 후 인건비 (500만)</strong></td><td class="minus">-252만원</td><td class="minus">-19만원 (BEP)</td><td class="plus">+247만원 ✓</td></tr>
+    </tbody>
+  </table>
+  <div class="warn-box"><strong>1,000세대 결론:</strong> 현행 인건비 구조에서는 Normal도 적자. 로봇 도입 + Best 케이스에서 월 247만원 흑자. 조건부 타깃 (로봇 전환이 전제).</div>
+
+  <div class="h3">3,000세대 단지 월 손익 <span class="tag tag-g">주력 타깃</span></div>
+  <table>
+    <thead><tr><th>항목</th><th>Worst</th><th>Normal</th><th>Best</th></tr></thead>
+    <tbody>
+      <tr><td>쿠폰 선납 수입</td><td colspan="3" class="center">1,350만원 (고정)</td></tr>
+      <tr><td>현금 판매 수입</td><td>444만원</td><td>1,332만원</td><td>2,442만원</td></tr>
+      <tr><td>합계 수입</td><td>1,794만원</td><td>2,682만원</td><td>3,792만원</td></tr>
+      <tr><td>쿠폰 원가</td><td colspan="3" class="center">756만원</td></tr>
+      <tr><td>현금 원가</td><td>178만원</td><td>533만원</td><td>977만원</td></tr>
+      <tr><td>운영비</td><td colspan="3" class="center">80만원</td></tr>
+      <tr><td><strong>현행 인건비 (1,250만)</strong></td><td class="minus">-470만원</td><td class="plus">+63만원 ✓</td><td class="plus">+729만원 ✓</td></tr>
+      <tr><td><strong>로봇 후 인건비 (500만)</strong></td><td class="plus">+280만원 ✓</td><td class="plus">+813만원 ✓</td><td class="plus">+1,479만원 ✓</td></tr>
+    </tbody>
+  </table>
+  <div class="info-box"><strong>3,000세대 결론:</strong> 현행 인건비로도 Normal에서 흑자 전환. 로봇 도입 후 Normal 813만원, Best 1,479만원. Worst도 로봇 전환 시 280만원 흑자. <strong>핵심 영업 타깃입니다.</strong></div>
+
+  <div class="h3">5,000세대 단지 월 손익 <span class="tag tag-g">최고 수익</span></div>
+  <table>
+    <thead><tr><th>항목</th><th>Worst</th><th>Normal</th><th>Best</th></tr></thead>
+    <tbody>
+      <tr><td>쿠폰 선납 수입</td><td colspan="3" class="center">2,250만원 (고정)</td></tr>
+      <tr><td>현금 판매 수입</td><td>666만원</td><td>1,998만원</td><td>3,774만원</td></tr>
+      <tr><td>합계 수입</td><td>2,916만원</td><td>4,248만원</td><td>6,024만원</td></tr>
+      <tr><td>쿠폰 원가</td><td colspan="3" class="center">1,260만원</td></tr>
+      <tr><td>현금 원가</td><td>266만원</td><td>799만원</td><td>1,510만원</td></tr>
+      <tr><td>운영비</td><td colspan="3" class="center">120만원</td></tr>
+      <tr><td><strong>현행 인건비 (1,750만)</strong></td><td class="minus">-480만원</td><td class="plus">+319만원 ✓</td><td class="plus">+1,384만원 ✓</td></tr>
+      <tr><td><strong>로봇 후 인건비 (750만)</strong></td><td class="plus">+520만원 ✓</td><td class="plus">+1,319만원 ✓</td><td class="plus">+2,384만원 ✓</td></tr>
+    </tbody>
+  </table>
+  <div class="info-box"><strong>5,000세대 결론:</strong> 로봇 전환 후 Worst에서도 520만원, Normal 1,319만원, Best 2,384만원. 단, 전국에 약 250개밖에 없어 확보 경쟁이 치열합니다.</div>
+
+  <div class="h3">인테리어 투자 회수 기간 (로봇 전환 후 Normal 기준)</div>
+  <table>
+    <thead><tr><th>단지 규모</th><th>초기 투자</th><th>월 순수익 (로봇·Normal)</th><th>투자 회수 기간</th><th>판단</th></tr></thead>
+    <tbody>
+      <tr><td>500세대</td><td>3,000만원</td><td>-14만원 (BEP)</td><td class="minus">회수 불가 (Normal 기준)</td><td class="minus">비권장</td></tr>
+      <tr><td>1,000세대</td><td>3,750만원</td><td>-19만원 (BEP)</td><td class="minus">회수 불가 (Normal 기준)</td><td>조건부</td></tr>
+      <tr><td>3,000세대</td><td>4,500만원</td><td>813만원</td><td class="plus">약 5.5개월</td><td class="plus">권장</td></tr>
+      <tr><td>5,000세대</td><td>5,250만원</td><td>1,319만원</td><td class="plus">약 4개월</td><td class="plus">최우선</td></tr>
+    </tbody>
+  </table>
+
+  <div class="h3">누적 단지 수별 SPC 월 순수익 (3,000세대 로봇 Normal 기준, 고정비 400만 차감)</div>
+  <p style="color:var(--sub);font-size:12.5px;margin:6px 0 14px;">단지당 813만원 × 단지 수 — SPC 고정비 400만원</p>
   <div class="bar-wrap">
-    <div class="bar-row">
-      <div class="bar-label">3개 단지</div>
-      <div class="bar-track"><div class="cum-fill" style="width:5.1%"></div></div>
-      <div class="bar-val">2,150만원</div>
-    </div>
-    <div class="bar-row">
-      <div class="bar-label">5개 단지</div>
-      <div class="bar-track"><div class="cum-fill" style="width:9.1%"></div></div>
-      <div class="bar-val">3,850만원</div>
-    </div>
-    <div class="bar-row">
-      <div class="bar-label">8개 단지</div>
-      <div class="bar-track"><div class="cum-fill" style="width:15.2%"></div></div>
-      <div class="bar-val">6,400만원</div>
-    </div>
-    <div class="bar-row">
-      <div class="bar-label">10개 단지</div>
-      <div class="bar-track"><div class="cum-fill" style="width:19.2%"></div></div>
-      <div class="bar-val">8,100만원</div>
-    </div>
-    <div class="bar-row">
-      <div class="bar-label">15개 단지</div>
-      <div class="bar-track"><div class="cum-fill" style="width:29.3%"></div></div>
-      <div class="bar-val">1억 2,350만원</div>
-    </div>
-    <div class="bar-row">
-      <div class="bar-label">20개 단지</div>
-      <div class="bar-track"><div class="cum-fill" style="width:39.4%"></div></div>
-      <div class="bar-val">1억 6,600만원</div>
-    </div>
-    <div class="bar-row">
-      <div class="bar-label">30개 단지</div>
-      <div class="bar-track"><div class="cum-fill" style="width:59.6%"></div></div>
-      <div class="bar-val">2억 5,100만원</div>
-    </div>
-    <div class="bar-row">
-      <div class="bar-label">50개 단지</div>
-      <div class="bar-track"><div class="cum-fill" style="width:100%"></div></div>
-      <div class="bar-val">4억 2,100만원</div>
-    </div>
+    <div class="bar-row"><div class="bar-label">3개</div><div class="bar-track"><div class="cum-fill" style="width:5.6%"></div></div><div class="bar-val">2,039만원</div></div>
+    <div class="bar-row"><div class="bar-label">5개</div><div class="bar-track"><div class="cum-fill" style="width:9.7%"></div></div><div class="bar-val">3,665만원</div></div>
+    <div class="bar-row"><div class="bar-label">10개</div><div class="bar-track"><div class="cum-fill" style="width:19.8%"></div></div><div class="bar-val">7,730만원</div></div>
+    <div class="bar-row"><div class="bar-label">15개</div><div class="bar-track"><div class="cum-fill" style="width:29.8%"></div></div><div class="bar-val">1억 1,795만원</div></div>
+    <div class="bar-row"><div class="bar-label">20개</div><div class="bar-track"><div class="cum-fill" style="width:39.8%"></div></div><div class="bar-val">1억 5,860만원</div></div>
+    <div class="bar-row"><div class="bar-label">30개</div><div class="bar-track"><div class="cum-fill" style="width:59.7%"></div></div><div class="bar-val">2억 3,990만원</div></div>
+    <div class="bar-row"><div class="bar-label">50개</div><div class="bar-track"><div class="cum-fill" style="width:100%"></div></div><div class="bar-val">4억 250만원</div></div>
   </div>
 
-  <div class="h3">연간 수익 시나리오</div>
+  <div class="h3">연간 수익 시나리오 (3,000세대 기준, 로봇 전환 비율 반영)</div>
   <table>
-    <thead><tr><th>시나리오</th><th>운영 단지</th><th>단지당 평균 순수익</th><th>월 순수익</th><th>연 순수익</th><th>목표 시점</th></tr></thead>
+    <thead><tr><th>시나리오</th><th>운영 단지</th><th>로봇 전환율</th><th>단지 평균 순수익</th><th>월 SPC 순수익</th><th>연 SPC 순수익</th></tr></thead>
     <tbody>
-      <tr><td>보수 (현행 인건비)</td><td>20개</td><td>100만원</td><td>1,600만원</td><td>약 1.9억</td><td>2026 Q4</td></tr>
-      <tr><td>기본 (로봇 부분)</td><td>30개</td><td>600만원</td><td>1억 7,600만원</td><td>약 21.1억</td><td>2027 Q4</td></tr>
-      <tr><td class="em">목표 (로봇 전면)</td><td class="em">50개</td><td class="em">850만원</td><td class="em">4억 2,100만원</td><td class="em">약 50.5억</td><td class="em">2028</td></tr>
+      <tr><td>보수 (Worst)</td><td>15개</td><td>50%</td><td>약 400만원</td><td>약 5,600만원</td><td>약 6.7억</td></tr>
+      <tr><td>기본 (Normal)</td><td>30개</td><td>80%</td><td>약 700만원</td><td>약 2억 700만원</td><td>약 24.8억</td></tr>
+      <tr><td class="em">목표 (Best)</td><td class="em">50개</td><td class="em">100%</td><td class="em">약 1,000만원</td><td class="em">약 4억 9,600만원</td><td class="em">약 59.5억</td></tr>
     </tbody>
   </table>
-
-  <div class="info-box">
-    <strong>핵심 포인트:</strong> 로봇 도입 여부가 수익성을 가른다. 현행 인건비 구조 유지 시 단지당 월 순수익은 100만원에 불과하지만, 로봇 전면 전환 후에는 850만원으로 8.5배 증가한다. 단지를 늘리는 것과 동시에 로봇 전환 속도를 높이는 것이 재무 성과의 핵심 변수다.
-  </div>
 </div>
 
 <!-- 10 로드맵 -->
@@ -719,38 +561,38 @@ td.center, th.center { text-align: center; }
     <div class="phase-item">
       <div class="phase-num">1</div>
       <div class="phase-body">
-        <div class="phase-period">2026 Q2 ~ Q3 · SPC 설립 및 초기 운영 안정화</div>
-        <div class="phase-name">법인 설립 · 파일럿 3개 단지 계약</div>
-        <div class="phase-desc">SPC 법인 설립 및 주주간계약(SHA) 체결. 아파트너 영업팀·황해 사무장 채널을 통해 파일럿 3개 단지 선정·계약 완료. 아파트너 앱 음료 사전 주문 연동 MVP 개발 착수. 위탁 운영사 선정 및 운영 프로세스 표준화. 파일럿 단지에서 실운영 데이터(매출·방문자·인기 메뉴) 수집.</div>
+        <div class="phase-period">2026 Q2 ~ Q3 · SPC 설립 및 파일럿</div>
+        <div class="phase-name">법인 설립 · 3개 단지 파일럿 계약</div>
+        <div class="phase-desc">1억원 자본금으로 SPC 법인 설립. 주주간계약(SHA) 체결. 아파트너·황해 채널로 3,000세대 이상 파일럿 3개 단지 선정·계약. 위탁 운영사 선정. 아파트너 앱 음료 주문 연동 MVP 착수. 실운영 데이터(매출·방문·메뉴 믹스) 수집.</div>
       </div>
     </div>
     <div class="phase-item">
       <div class="phase-num">2</div>
       <div class="phase-body">
-        <div class="phase-period">2026 Q4 ~ 2027 Q1 · 10개 단지 확장 · 브랜드 원가 협상 착수</div>
-        <div class="phase-name">빠른 확장 · 국내 프리미엄 브랜드 원가 협상</div>
-        <div class="phase-desc">황해 200개 단지 네트워크 집중 공략으로 10개 단지 달성. 파일럿 운영 데이터를 제시하며 국내 프리미엄 브랜드(폴바셋·커피빈 등) 원가 우선 협상 시작. 앱 주문 연동 정식 론칭. 투자 회수 모니터링 — 7~8개월 내 회수 완료 여부 점검.</div>
+        <div class="phase-period">2026 Q4 ~ 2027 Q1 · 10개 단지 · 브랜드 원가 협상</div>
+        <div class="phase-name">빠른 확장 · 국내 프리미엄 브랜드 협상 착수</div>
+        <div class="phase-desc">황해 200개 단지 네트워크 집중 공략으로 10개 단지 달성. 파일럿 데이터 제시로 국내 프리미엄 브랜드 원가 우선 협상 시작. 쿠폰 모델 정식 운영. 투자 회수 진행 상황 모니터링. 증자 또는 투자 유치 타이밍 검토.</div>
       </div>
     </div>
     <div class="phase-item">
       <div class="phase-num">3</div>
       <div class="phase-body">
-        <div class="phase-period">2027 Q2 ~ Q4 · 20~30개 단지 · 로봇 파일럿 · 관리업체 B2B</div>
-        <div class="phase-name">로봇 바리스타 파일럿 · 관리업체 구독 모델 론칭</div>
-        <div class="phase-desc">20개 단지 달성 후 로봇 바리스타 1~2개 단지 파일럿 도입. 비용 절감 데이터 확보 후 전체 단지로 단계적 확산. 관리업체 대상 B2B 구독 모델(단지당 20~25만원/월) 론칭. 30개 단지 달성 시 해외 하이엔드 브랜드 협상 개시.</div>
+        <div class="phase-period">2027 Q2 ~ Q4 · 30개 단지 · 로봇 파일럿 · 관리업체 B2B</div>
+        <div class="phase-name">로봇 바리스타 파일럿 · 관리업체 B2B 론칭</div>
+        <div class="phase-desc">30개 단지 달성. 로봇 바리스타 1~2개 단지 파일럿 도입 → 비용 절감 데이터 확보 후 전체 확산. 관리업체 B2B 구독 모델 론칭(단지당 20~25만원/월). 해외 하이엔드 브랜드 협상 개시.</div>
       </div>
     </div>
     <div class="phase-item">
       <div class="phase-num">4</div>
       <div class="phase-body">
-        <div class="phase-period">2028년 이후 · 50개 단지 · 완전 자동화 · 네슬레 협상</div>
-        <div class="phase-name">목표 달성 · 브랜드 포트폴리오 완성</div>
-        <div class="phase-desc">50개 단지 달성. 로봇 전면 자동화 완료(단지당 월 순수익 850만원 구조 고착). 보유 단지 수 및 누적 입주민 데이터를 근거로 네슬레 1~2년 독점 공급 계약 협상 착수. 관리업체 B2B 채널 고도화. SPC 기업가치 평가 후 외부 투자 유치 옵션 검토.</div>
+        <div class="phase-period">2028년 이후 · 50개 단지 · 네슬레 판권 · 완전 자동화</div>
+        <div class="phase-name">목표 달성 · 네슬레 독점 판권 협상</div>
+        <div class="phase-desc">50개 단지 달성. 누적 세대수 및 구매력 데이터 제시로 네슬레 1~2년 독점 원두 공급 계약 협상 착수. 로봇 전면 자동화로 수익률 극대화. 성사 시 원가율 개선 전 단지 동시 적용. SPC 기업가치 평가 후 외부 투자 또는 IPO 옵션 검토.</div>
       </div>
     </div>
   </div>
 </div>
 
-</div><!-- /wrap -->
+</div>
 </body>
 </html>
