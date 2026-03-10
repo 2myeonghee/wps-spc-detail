@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WPS SPC 설립 제안서 v4.1</title>
+<title>WPS SPC 설립 제안서 v4.5</title>
 <style>
 :root {
   --primary: #1a2a3a;
@@ -27,6 +27,7 @@ body {
 }
 .wrap { max-width: 860px; margin: 0 auto; padding: 0 40px; }
 
+/* 표지 */
 .cover {
   background: var(--primary);
   color: #fff;
@@ -57,21 +58,23 @@ body {
 .kpi-unit { font-size: 10px; color: rgba(255,255,255,0.5); margin-top: 3px; }
 .cover-meta { display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.45); }
 
-.section { padding: 52px 0 36px; border-bottom: 1px solid var(--border); }
+/* 섹션 */
+.section { padding: 48px 0 32px; border-bottom: 1px solid var(--border); }
 .section:last-child { border-bottom: none; }
 .section-num { font-size: 11px; font-weight: 700; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
-.section-title { font-size: 23px; font-weight: 800; color: var(--primary); margin-bottom: 18px; line-height: 1.35; }
-.section-lead { color: var(--sub); font-size: 14px; line-height: 1.9; margin-bottom: 24px; }
+.section-title { font-size: 22px; font-weight: 800; color: var(--primary); margin-bottom: 16px; line-height: 1.35; }
+.section-lead { color: var(--sub); font-size: 13.5px; line-height: 1.9; margin-bottom: 22px; }
 
-.h3 { font-size: 15px; font-weight: 700; color: var(--primary); border-left: 3px solid var(--accent); padding-left: 10px; margin: 28px 0 12px; }
+.h3 { font-size: 14px; font-weight: 700; color: var(--primary); border-left: 3px solid var(--accent); padding-left: 10px; margin: 26px 0 11px; }
 .h3:first-child { margin-top: 0; }
 
-ul.list { padding-left: 20px; margin: 8px 0 16px; }
-ul.list li { margin-bottom: 8px; }
+ul.list { padding-left: 20px; margin: 8px 0 14px; }
+ul.list li { margin-bottom: 7px; }
 ul.list li strong { font-weight: 700; }
 
-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 13px; }
-th, td { border: 1px solid var(--border); padding: 9px 11px; text-align: left; vertical-align: middle; }
+/* 표 */
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+th, td { border: 1px solid var(--border); padding: 9px 11px; text-align: left; vertical-align: middle; word-break: keep-all; }
 th { background: #f5f5f5; font-weight: 700; }
 td { background: #fff; }
 td.em { font-weight: 700; }
@@ -83,50 +86,68 @@ tr.total td { background: #f0f5f8; font-weight: 700; }
 tr.subtotal td { background: #fafafa; font-weight: 700; border-top: 1.5px solid #aaa; }
 tr.section-header td { background: #e8eef3; font-weight: 700; font-size: 12px; color: var(--primary); }
 
-.info-box { background: var(--light); border-left: 4px solid var(--accent); border-radius: 4px; padding: 14px 18px; margin: 16px 0; font-size: 13.5px; line-height: 1.85; }
+/* 박스 */
+.info-box { background: var(--light); border-left: 4px solid var(--accent); border-radius: 4px; padding: 13px 17px; margin: 14px 0; font-size: 13px; line-height: 1.85; }
 .info-box strong { font-weight: 700; }
-.warn-box { background: #fffbf0; border-left: 4px solid #c8a000; border-radius: 4px; padding: 14px 18px; margin: 16px 0; font-size: 13.5px; line-height: 1.85; }
-.good-box { background: #f0faf4; border-left: 4px solid var(--plus); border-radius: 4px; padding: 14px 18px; margin: 16px 0; font-size: 13.5px; line-height: 1.85; }
+.warn-box { background: #fffbf0; border-left: 4px solid #c8a000; border-radius: 4px; padding: 13px 17px; margin: 14px 0; font-size: 13px; line-height: 1.85; }
+.good-box { background: #f0faf4; border-left: 4px solid var(--plus); border-radius: 4px; padding: 13px 17px; margin: 14px 0; font-size: 13px; line-height: 1.85; }
 
-.card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
-.card { border: 1px solid var(--border); border-radius: 10px; padding: 20px 18px; }
-.card-title { font-size: 14px; font-weight: 800; color: var(--primary); margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+/* 카드 */
+.card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 14px 0; }
+.card { border: 1px solid var(--border); border-radius: 8px; padding: 18px 16px; }
+.card-title { font-size: 13px; font-weight: 800; color: var(--primary); margin-bottom: 11px; padding-bottom: 9px; border-bottom: 1px solid var(--border); }
 
-.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 16px 0; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
-.compare-col { padding: 20px 18px; }
+/* 비교 그리드 */
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 14px 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.compare-col { padding: 18px 16px; }
 .compare-col:first-child { border-right: 1px solid var(--border); }
-.compare-header { font-size: 12px; font-weight: 800; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 12px; }
-.compare-title { font-size: 16px; font-weight: 800; color: var(--primary); margin-bottom: 14px; }
+.compare-header { font-size: 11px; font-weight: 800; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 10px; }
+.compare-title { font-size: 15px; font-weight: 800; color: var(--primary); margin-bottom: 12px; }
 .compare-col.highlight { background: #f0f5f8; }
 
-.phase-list { margin: 16px 0; }
-.phase-item { display: flex; gap: 16px; margin-bottom: 22px; }
-.phase-num { width: 34px; height: 34px; border-radius: 50%; background: var(--primary); color: #fff; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
-.phase-period { font-size: 11px; color: var(--accent); font-weight: 700; margin-bottom: 4px; }
-.phase-name { font-size: 15px; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
-.phase-desc { font-size: 13px; color: var(--sub); line-height: 1.8; }
+/* 로드맵 */
+.phase-list { margin: 14px 0; }
+.phase-item { display: flex; gap: 14px; margin-bottom: 20px; }
+.phase-num { width: 32px; height: 32px; border-radius: 50%; background: var(--primary); color: #fff; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+.phase-period { font-size: 11px; color: var(--accent); font-weight: 700; margin-bottom: 3px; }
+.phase-name { font-size: 14px; font-weight: 700; color: var(--primary); margin-bottom: 5px; }
+.phase-desc { font-size: 12.5px; color: var(--sub); line-height: 1.8; }
 
+/* 태그 */
 .tag { display: inline-block; font-size: 10px; font-weight: 700; background: var(--accent); color: #fff; padding: 2px 7px; border-radius: 4px; margin-left: 4px; vertical-align: middle; }
 .tag-new { background: #c8a000; }
 
-/* 수수료 협의 바 */
-.fee-range { margin: 16px 0; }
-.fee-row { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
-.fee-label { width: 80px; font-size: 12px; font-weight: 700; color: var(--primary); flex-shrink: 0; }
-.fee-track { flex: 1; background: #eee; border-radius: 4px; height: 18px; position: relative; }
-.fee-fill { height: 100%; background: var(--accent); border-radius: 4px; display: flex; align-items: center; justify-content: flex-end; padding-right: 8px; font-size: 10px; font-weight: 700; color: #fff; }
-.fee-desc { width: 160px; font-size: 11px; color: var(--sub); flex-shrink: 0; }
+/* 성장 바 (Section 10) */
+.growth-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 13px; }
+.growth-table th, .growth-table td { border: 1px solid var(--border); padding: 9px 11px; vertical-align: middle; }
+.growth-table th { background: #f5f5f5; font-weight: 700; text-align: center; }
+.growth-table td.label { font-weight: 700; text-align: center; background: #f9f9f9; }
+.growth-table td.num { text-align: right; }
+.growth-table td.highlight { text-align: right; font-weight: 700; color: var(--plus); }
+.bar-cell { padding: 6px 11px !important; }
+.bar-inner { height: 14px; background: var(--accent); border-radius: 3px; min-width: 3px; }
 
 @media print {
-  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .cover { height: calc(297mm - 36mm); min-height: unset; padding: 18mm; }
-  .section { page-break-before: always; padding: 36px 0 24px; }
-  .card, .info-box, .warn-box, .good-box, .phase-item, .compare-grid { page-break-inside: avoid; }
-  table { font-size: 10px; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; font-size: 11px; }
+  .cover { height: calc(297mm - 36mm); min-height: unset; padding: 15mm 18mm; page-break-after: always; }
+  /* 자연스러운 페이지 흐름 — 모든 섹션 강제 새 페이지 제거 */
+  .section { padding: 24px 0 18px; border-bottom: 1px solid var(--border); }
+  /* 주요 섹션만 새 페이지 시작 */
+  .section.break { page-break-before: always; }
+  .h3 { margin: 18px 0 9px; page-break-after: avoid; }
+  .h3:first-child { margin-top: 0; }
+  /* 컨텐츠 분리 방지 */
+  table { page-break-inside: auto; font-size: 10px; }
+  tr { page-break-inside: avoid; }
   th, td { padding: 6px 8px; }
   tbody { display: table-row-group; }
-  .wrap { padding: 0 17mm; }
+  .card, .info-box, .warn-box, .good-box, .phase-item, .compare-grid { page-break-inside: avoid; }
+  .card-grid { page-break-inside: avoid; }
+  .wrap { padding: 0 15mm; }
   .card-grid, .compare-grid { grid-template-columns: 1fr 1fr; }
+  .section-title { font-size: 17px; }
+  .section-num { font-size: 10px; }
+  .info-box, .warn-box, .good-box { font-size: 10.5px; padding: 10px 14px; }
 }
 </style>
 </head>
@@ -135,7 +156,7 @@ tr.section-header td { background: #e8eef3; font-weight: 700; font-size: 12px; c
 <!-- 표지 -->
 <div class="cover">
   <div>
-    <div class="badge">WPS SPC 설립 제안서 · 2026년 3월 · v4.1</div>
+    <div class="badge">WPS SPC 설립 제안서 · 2026년 3월 · v4.5</div>
     <h1>WPS 아파트 단지<br>SPC 설립 제안서</h1>
     <div class="subtitle">
       아파트너 × 법무법인 더 에이치 황해<br>
@@ -176,7 +197,7 @@ tr.section-header td { background: #e8eef3; font-weight: 700; font-size: 12px; c
 <div class="wrap">
 
 <!-- 01 설립 목적 -->
-<div class="section">
+<div class="section break">
   <div class="section-num">SECTION 01</div>
   <div class="section-title">SPC 설립 목적 및 배경</div>
   <p class="section-lead">국내 3,000세대 이상 아파트 단지는 관리사무소 내 유휴 공간이 있음에도 전문 F&B 브랜드를 입점시킬 채널이 없습니다. 동시에 공동주택관리법은 커뮤니티 시설 운영을 입대의 주도로 하도록 규정하고 있어, 외부 사업자가 직접 운영하는 방식은 법적으로 제약이 있습니다. 본 SPC는 이 두 가지 문제를 동시에 해결하는 구조로 설계되었습니다.</p>
@@ -255,7 +276,7 @@ tr.section-header td { background: #e8eef3; font-weight: 700; font-size: 12px; c
 </div>
 
 <!-- 03 WPS 공급망 -->
-<div class="section">
+<div class="section break">
   <div class="section-num">SECTION 03</div>
   <div class="section-title">WPS 공급망 및 합법적 계약 구조</div>
 
@@ -289,7 +310,7 @@ tr.section-header td { background: #e8eef3; font-weight: 700; font-size: 12px; c
 </div>
 
 <!-- 04 원가율·판매량 재정립 -->
-<div class="section">
+<div class="section break">
   <div class="section-num">SECTION 04</div>
   <div class="section-title">메뉴 가격 인상 · 원가율 재정립 · 판매량 보정</div>
   <p class="section-lead">헬리오시티 PPTX의 원가율 60%는 평균 판매 단가가 2,043원으로 낮았기 때문에 높게 나온 것입니다. 재료비 자체는 잔당 1,200원으로 고정됩니다. 메뉴를 500원 인상하면 원가율이 극적으로 개선됩니다. 또한 헬리오시티 판매량 데이터는 WPS 브랜드 효과가 충분히 반영되지 않은 초기 수치이므로, 스타벅스 브랜드 기준으로 판매량을 별도 보정합니다.</p>
@@ -345,7 +366,7 @@ tr.section-header td { background: #e8eef3; font-weight: 700; font-size: 12px; c
 </div>
 
 <!-- 05 기본안 시뮬레이션 -->
-<div class="section">
+<div class="section break">
   <div class="section-num">SECTION 05</div>
   <div class="section-title">기본안 — 판매량 보정 + 가격 인상 적용 재무 시뮬레이션</div>
   <p class="section-lead">세대당 월 3.5잔(Normal) 기준 적용. 이 중 쿠폰 사용분(세대당 2.1잔)을 제외한 나머지가 현금 구매입니다. 앱 주문 채널은 기본안에서 제외합니다.</p>
@@ -483,7 +504,7 @@ tr.section-header td { background: #e8eef3; font-weight: 700; font-size: 12px; c
 </div>
 
 <!-- 07 단지 손익 보전 -->
-<div class="section">
+<div class="section break">
   <div class="section-num">SECTION 07</div>
   <div class="section-title">단지 손익 보전 방안 — SPC의 위험 공유 프로그램</div>
   <p class="section-lead">기본안에서 2,000세대 단지가 Worst 시나리오일 경우 손실이 발생할 수 있습니다. SPC는 단지의 참여 의사결정을 쉽게 만들기 위해 아래 3가지 손익 보전 프로그램을 제안합니다. 단지는 하나를 선택할 수 있습니다.</p>
@@ -532,7 +553,7 @@ tr.section-header td { background: #e8eef3; font-weight: 700; font-size: 12px; c
 </div>
 
 <!-- 08 SPC 1년차 손익 -->
-<div class="section">
+<div class="section break">
   <div class="section-num">SECTION 08</div>
   <div class="section-title">SPC 1년차 20개 단지 손익 및 로드맵</div>
 
@@ -609,7 +630,7 @@ tr.section-header td { background: #e8eef3; font-weight: 700; font-size: 12px; c
 </div>
 
 <!-- 10 연간 SPC 기여 -->
-<div class="section">
+<div class="section break">
   <div class="section-num">SECTION 10</div>
   <div class="section-title">연간 SPC 기여 현황 — 단지별·누적 성장 전망</div>
   <p class="section-lead">월 기여 이익을 연간으로 환산하고, 단지 확보 수에 따른 SPC 연간 순수익 성장 경로를 제시합니다. 기본안(쿠폰+현금 20% 수수료) 기준이며, 앱 채널 추가 시 상단이 기준치입니다.</p>
@@ -663,41 +684,62 @@ tr.section-header td { background: #e8eef3; font-weight: 700; font-size: 12px; c
     </tbody>
   </table>
 
-  <div class="h3">SPC 누적 단지별 월 순수익 성장 (단위: 만원)</div>
-  <div class="bar-wrap">
-    <div class="bar-row">
-      <div class="bar-label">3개 단지</div>
-      <div class="bar-track"><div class="cum-fill" style="width:4.6%"></div></div>
-      <div class="bar-val">월 1,244만원</div>
-    </div>
-    <div class="bar-row">
-      <div class="bar-label">10개 단지</div>
-      <div class="bar-track"><div class="cum-fill" style="width:18.8%"></div></div>
-      <div class="bar-val">월 5,080만원</div>
-    </div>
-    <div class="bar-row">
-      <div class="bar-label">20개 단지</div>
-      <div class="bar-track"><div class="cum-fill" style="width:39%"></div></div>
-      <div class="bar-val">월 10,560만원</div>
-    </div>
-    <div class="bar-row">
-      <div class="bar-label">30개 단지</div>
-      <div class="bar-track"><div class="cum-fill" style="width:59.4%"></div></div>
-      <div class="bar-val">월 16,040만원</div>
-    </div>
-    <div class="bar-row">
-      <div class="bar-label">50개 단지</div>
-      <div class="bar-track"><div class="cum-fill" style="width:100%"></div></div>
-      <div class="bar-val">월 27,000만원</div>
-    </div>
-  </div>
+  <div class="h3">SPC 누적 단지별 월·연간 순수익 성장</div>
+  <table class="growth-table">
+    <thead>
+      <tr>
+        <th style="width:14%">누적 단지</th>
+        <th style="width:24%">규모 비율</th>
+        <th class="right" style="width:18%">SPC 월 순수익</th>
+        <th class="right" style="width:18%">SPC 연간 순수익</th>
+        <th style="width:26%">주요 이정표</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="label">3개 단지</td>
+        <td class="bar-cell"><div class="bar-inner" style="width:5%"></div></td>
+        <td class="num">1,244만원</td>
+        <td class="highlight">1억 4,928만원</td>
+        <td>파일럿 완료 · 자본금 회수 시작</td>
+      </tr>
+      <tr>
+        <td class="label">10개 단지</td>
+        <td class="bar-cell"><div class="bar-inner" style="width:19%"></div></td>
+        <td class="num">5,080만원</td>
+        <td class="highlight">6억 960만원</td>
+        <td>흑자 안정화 · 앱 연동 본격화</td>
+      </tr>
+      <tr style="background:#f0f5f8;">
+        <td class="label" style="font-weight:800;">20개 단지</td>
+        <td class="bar-cell"><div class="bar-inner" style="width:39%; background:#0a5c36;"></div></td>
+        <td class="num" style="font-weight:800;">10,560만원</td>
+        <td class="highlight" style="font-size:14px;">12억 6,720만원</td>
+        <td style="font-weight:700;">1년차 목표 달성 · 투자 완전 회수</td>
+      </tr>
+      <tr>
+        <td class="label">30개 단지</td>
+        <td class="bar-cell"><div class="bar-inner" style="width:59%"></div></td>
+        <td class="num">16,040만원</td>
+        <td class="highlight">19억 2,480만원</td>
+        <td>네슬레 직접 계약 협상 시점</td>
+      </tr>
+      <tr>
+        <td class="label">50개 단지</td>
+        <td class="bar-cell"><div class="bar-inner" style="width:100%"></div></td>
+        <td class="num">27,000만원</td>
+        <td class="highlight">32억 4,000만원</td>
+        <td>국내 아파트 F&B 플랫폼 지위</td>
+      </tr>
+    </tbody>
+  </table>
   <div class="info-box">
     <strong>투자 회수 분석:</strong> 초기 자본금 1억원 기준, 파일럿 3개 단지만 안착해도 <strong>월 1,244만원 순수익</strong>으로 약 8개월 내 회수 가능합니다. 20개 단지 달성 시 연 12.7억원으로 자본금 대비 12.7배의 연간 수익을 냅니다.
   </div>
 </div>
 
 <!-- 11 적법성 검토 -->
-<div class="section">
+<div class="section break">
   <div class="section-num">SECTION 11</div>
   <div class="section-title">단지 카페 수익의 적법성 검토</div>
   <p class="section-lead">입주자대표회의(입대의)가 단지 내 커뮤니티 시설에서 카페를 운영하고 수익을 얻는 행위는 공동주택관리법 및 관련 고시 하에서 완전히 합법입니다. 다만, 수익의 귀속 및 처분에 관한 절차를 정확히 준수해야 합니다. 본 섹션은 SPC 위탁 계약 체결 전 법률 검토의 핵심 쟁점을 정리합니다.</p>
@@ -803,7 +845,7 @@ tr.section-header td { background: #e8eef3; font-weight: 700; font-size: 12px; c
 </div>
 
 <!-- 12 지분 구조 및 주주간계약 -->
-<div class="section">
+<div class="section break">
   <div class="section-num">SECTION 12</div>
   <div class="section-title">지분 구조 및 주주간계약 (SHA) 핵심 조항</div>
   <p class="section-lead">아파트너 70% : 황해 30%의 지분 구조는 양사의 출자 능력과 역할 기여도를 반영한 결과입니다. 단, 70%가 일방적 통제를 의미하지 않으며, 주주간계약(Shareholders' Agreement)을 통해 양측의 권리와 의무, 분쟁 해결 방식을 명확히 규정합니다.</p>
@@ -909,7 +951,7 @@ tr.section-header td { background: #e8eef3; font-weight: 700; font-size: 12px; c
 </div>
 
 <!-- 13 인테리어 투자 비용 -->
-<div class="section">
+<div class="section break">
   <div class="section-num">SECTION 13</div>
   <div class="section-title">단지 인테리어 투자 비용 및 SPC 지원 구조</div>
   <p class="section-lead">WPS 카페 도입을 위해 단지는 공간 인테리어 공사를 진행해야 합니다. 단지가 직접 발주하는 형태이며, SPC는 설비(기기) 비용을 부담합니다. 인테리어 비용은 단지 규모에 따라 차등 산정되며, 단지 자산으로 등재됩니다.</p>
